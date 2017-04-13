@@ -6,8 +6,18 @@
     "react-scripts": "0.9.5"
   },
   "dependencies": {
+    "express": "^4.15.2",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-blur": "^0.5.2",
+    "react-dom": "^15.4.2",
+    "react-fontawesome": "^1.5.0",
+    "react-helmet": "^5.0.2",
+    "react-load-script": "0.0.2",
+    "react-player": "^0.14.3",
+    "react-scroll": "^1.4.8",
+    "react-svg": "^2.1.19",
+    "react-svg-loader": "^1.1.1",
+    "sine-waves": "file:local_modules/sine-waves"
   },
   "scripts": {
     "start": "react-scripts start",

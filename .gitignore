@@ -2,6 +2,10 @@
 
 # dependencies
 /node_modules
+/local_modules
+/files
+/bower_components
+/public
 
 # testing
 /coverage
@@ -12,7 +16,8 @@
 # misc
 .DS_Store
 .env
+.tern-project
+bower.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
