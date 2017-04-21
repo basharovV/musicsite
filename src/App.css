@@ -1,0 +1,288 @@
+body {
+  /* light */
+  background-color: #f0f0f0;
+  /* dark */
+  /*background-color: #1f1f1f; */
+
+}
+
+h2 {
+  /* light */
+  color: #c44242;
+   /* dark */
+  /*color: #c7c7c7;*/
+  font-size: 2em;
+  font-weight: normal;
+
+}
+
+h3 {
+  /* light */
+  color: #3b3737;
+  font-size: 1.2em;
+  font-weight: normal;
+   /* dark */
+  /*color: #c7c7c7;*/
+}
+
+
+
+.App {
+  text-align: center;
+  color: #dbdbdb;
+  /*font-family: 'Maven Pro', cursive;*/
+  font-family: 'Padauk', sans-serif;
+
+}
+
+.App-section-active {
+  color: #d21d1d;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-logo {
+  height: 50%;
+  width: 100%;
+  /*position: absolute;*/
+  display: inline;
+  margin: auto;
+  z-index: 1;
+  text-align: center;
+
+}
+
+.App-divider {
+  border-color: #67706f;
+  border-bottom: 2px;
+  background-color: #3e3c3b;
+}
+
+.App-header {
+  background-image: url("http://localhost:8080/piano_bg_2.jpg");
+  background-position: top;
+  background-size: 100%;
+
+}
+
+.App-header-container {
+  background: linear-gradient(rgba(207, 204, 204, 0), rgba(7, 11, 31, 0.9));
+
+}
+.App-header-top-container {
+
+
+  /*margin-top:4em;*/
+  color: white;
+  text-align: center;
+}
+
+.App-header-top {
+  width: 100%;
+  height: 100%;
+  /*background-color: rgba(0, 0, 0, 0.6);*/
+
+  background-size: 100%;
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+.App-header-bottom {
+  /*background-color: rgba(0, 0, 0, 0.6);*/
+  background-size: 100%;
+
+}
+
+.App-title {
+  display: inline;
+  position: relative;
+  font-family: 'Amatica SC', cursive;
+  font-style: oblique;
+  font-size: 4.5em;
+  color: #8c2b2b;
+  z-index: 1;
+  line-height: 60px;
+}
+
+.App-title::after {
+  content: " • ";
+  color: #147e35;
+}
+.App-subtitle {
+  display: inline;
+  position: relative;
+  font-family: 'Amatica SC', cursive;
+  font-style: oblique;
+  font-size: 4em;
+  color: #949590;
+  z-index: 1;
+  line-height: 60px;
+}
+
+.App-sine-waves {
+  top: 0px;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  margin-top: 2em;
+  /*z-index: 0;*/
+}
+
+.App-tagline {
+  /*position: absolute;*/
+  font-weight: 100;
+  overflow: hidden;
+  height: 1.5em;
+  display: inline-block;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin:auto;
+  font-family: 'Cabin Sketch', cursive;
+  color: #8c2b2b
+}
+
+/*Desktops*/
+@media only screen and (min-width: 768px) {
+
+   .App-tagline {
+     font-size: 2.5em;
+   }
+}
+
+.App-tagline p {
+  /*display: inline-block;*/
+  float: left;
+  margin: 0;
+  /*color: #8c2b2b*/
+  color: #4677b8;
+}
+
+.App-tagline ul {
+  margin-top: 0;
+  padding-left: 10px;
+  display: inline-block;
+  text-align: left;
+  list-style: none;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: change;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+
+.App-tagline li {
+  margin: 0;
+  font-weight: 400;
+    color: #a9c0cd;
+}
+
+@-webkit-keyframes change {
+  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+  33.32%,45.98% {transform:translate3d(0,-50%,0);}
+  49.98%,62.64% {transform:translate3d(0,-75%,0);}
+  66.64%,79.3% {transform:translate3d(0,-50%,0);}
+  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+@-o-keyframes change {
+  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+  33.32%,45.98% {transform:translate3d(0,-50%,0);}
+  49.98%,62.64% {transform:translate3d(0,-75%,0);}
+  66.64%,79.3% {transform:translate3d(0,-50%,0);}
+  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+@-moz-keyframes change {
+  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+  33.32%,45.98% {transform:translate3d(0,-50%,0);}
+  49.98%,62.64% {transform:translate3d(0,-75%,0);}
+  66.64%,79.3% {transform:translate3d(0,-50%,0);}
+  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+
+@keyframes change {
+  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+  33.32%,45.98% {transform:translate3d(0,-50%,0);}
+  49.98%,62.64% {transform:translate3d(0,-75%,0);}
+  66.64%,79.3% {transform:translate3d(0,-50%,0);}
+  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+
+.App-music-player {
+  background-color: rgb(0, 148, 99);
+}
+
+.App-menu-container {
+  width: 100%;
+}
+
+
+.App-menu {
+  display: inline-block;
+  z-index: 1;
+  /*position: relative;*/
+  margin: auto;
+  /*border-bottom: #3d0b16 solid 2px;*/
+}
+
+.App-menu ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.App-menu li {
+  list-style-type: none;
+  display: inline;
+  padding: 0;
+  color: #999999;
+  text-align: center;
+}
+
+.App-menu li + li:before {
+  content: ' • ';
+  color: #f2eace;
+}
+
+.App-menu li a {
+  text-align: center;
+  text-decoration: none;
+  padding: 0;
+  font-size: 20pt;
+  color: #999999;
+}
+
+.App-menu li a:hover {
+  text-shadow: 1px 1px 6px #b6aab0;
+
+}
+.App-home-sections {
+  background-color: #f0f0f0;
+
+  /*background-color: #2f2d2b;*/
+}
+.App-about {
+  /*background-color: #d2d2d2;*/
+  /*height:500px;*/
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.App-about-genres {
+  /*font-size: 1.2em;*/
+  color: #539e88;
+}
+
+.App-tracks{
+  /*background-color: #d2d2d2;*/
+  height:500px;
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+}

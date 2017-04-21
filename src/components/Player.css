@@ -1,0 +1,108 @@
+
+.Player {
+  font-family: 'Padauk', sans-serif;
+  /*display: inline-block;*/
+  /*align-items: center;*/
+  display: inline-block;
+  /*padding: 10px;*/
+  margin: 10px;
+  overflow: hidden;
+  /*border-radius: 0.6em;*/
+  /*border: 2px solid #373735;*/
+  /*-webkit-box-shadow: 10px 7px 50px -6px rgba(112,112,112,0.59);
+  -moz-box-shadow: 10px 7px 50px -6px rgba(112,112,112,0.59);
+  box-shadow: 10px 7px 50px -6px rgba(112,112,112,0.59);*/
+  /*background-color: #423d42;*/
+
+}
+
+.Player-top {
+  height: 150px;
+  width: 500px;
+  display: inline-flex;
+  border-bottom: 2px solid #dddedd;
+  /*background-color: #f1e9e9;*/
+  /*align-items: flex-start;*/
+}
+
+.Player-info  {
+  /*display: block;*/
+  width: 100%;
+  height: 100%;
+  float: left;
+  display: inline-block;
+  /*border: 1px solid #a298a2;*/
+  /*background-color: #f1e9e9;*/
+  /*align-items: flex-start;*/
+}
+
+.Player-img  {
+  align-self: flex-start;
+  float: left;
+  height: 100%;
+  padding-left:10px;
+  padding-right: 10px;
+  margin-right: 15px;
+}
+
+.Player-controls {
+  /*display: table-cell;*/
+  display: inline-flex;
+  height: 25px;
+  padding: 5px;
+  /*vertical-align: middle;*/
+}
+
+#timeline{
+    display: flex;
+    vertical-align: middle;
+    align-self: center;
+    width: 400px;
+    height: 20px;
+    border-radius: 15px;
+    border: 1px solid #5e6296;
+    background: rgba(0,0,0,.3);
+    /*position: absolute;*/
+    /*float: right;*/
+}
+
+#handle{
+  /*display: block;*/
+  align-self: center;
+  vertical-align: middle;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: rgba(230, 227, 227, 1);
+  /*vertical-align: middle;*/
+}
+
+.Player-play-pause {
+  /*float: left;*/
+  display: inline-block;
+
+  /*float:left;*/
+  /*position: relative;*/
+  /*height: 20px;*/
+}
+
+.Player-time {
+  font-size: 0.7em;
+  /*vertical-align: middle;*/
+  align-self: center;
+  line-height: 100%;
+  color: #4c494e;
+  vertical-align: middle;
+  /*display: inline-block;*/
+}
+.Player-title {
+  color: #bdc4c4;
+  font-size: 1em;
+  display: block;
+}
+
+.Player-description {
+  color: #b5afaf;
+  font-size: 0.9em;
+  display: block;
+}

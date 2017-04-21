@@ -1,0 +1,32 @@
+{
+  "name": "musicsite",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-blur": "^0.5.2",
+    "react-dom": "^15.5.4",
+    "react-fontawesome": "^1.5.0",
+    "react-helmet": "^5.0.2",
+    "react-icons": "^2.2.3",
+    "react-load-script": "0.0.2",
+    "react-player": "^0.14.3",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-router-hash-link": "^1.0.0",
+    "react-scroll": "^1.4.8",
+    "react-svg": "^2.1.19",
+    "react-svg-loader": "^1.1.1",
+    "react-wavesurfer": "^0.8.3",
+    "sine-waves": "file:local_modules/sine-waves"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
