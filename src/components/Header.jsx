@@ -6,6 +6,8 @@ import Script from 'react-load-script';
 import FontAwesome from 'react-fontawesome';
 import Blur from 'react-blur';
 import AppIcon from './Icons.jsx';
+import { Parallax, Background } from 'react-parallax';
+
 
 export default class Header extends Component {
 
@@ -90,6 +92,11 @@ export default class Header extends Component {
   render () {
     return (
       <div className="App-header">
+        <Parallax bgImage="http://localhost:8080/piano_bg_6.jpg" strength={200}
+        style={{
+          backgroundSize: 'cover',
+          backgroundPosition: "0% 200%"
+        }}>
         <div className="App-header-container">
           <div className="App-header-top-container">
             {/* <img className="App-header-bg" src="http://localhost:8080/piano_bg_2.jpg" /> */}
@@ -101,7 +108,6 @@ export default class Header extends Component {
               </div>
             </div>
           </div>
-
         <div className="App-header-bottom">
           <div className="App-title">
               Vyacheslav Basharov
@@ -121,6 +127,7 @@ export default class Header extends Component {
           </div>
         </div>
       </div>
+    </Parallax>
     </div>
     )
   }

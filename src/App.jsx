@@ -15,9 +15,9 @@ class App extends Component {
             @import url('https://fonts.googleapis.com/css?family=Padauk');
             @import url('https://fonts.googleapis.com/css?family=Maven+Pro');
             @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+            @import url('https://fonts.googleapis.com/css?family=Raleway:200,400,700');
             @import url(node_modules/react-blur/dist.css);
           </style>
-          <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.3.7/wavesurfer.min.js"></script>
         </Helmet>
         <Header/>
         <ScrollSection/>

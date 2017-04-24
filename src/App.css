@@ -1,6 +1,6 @@
 body {
   /* light */
-  background-color: #f0f0f0;
+  background-color: rgba(17, 7, 31, 1);
   /* dark */
   /*background-color: #1f1f1f; */
 
@@ -8,18 +8,18 @@ body {
 
 h2 {
   /* light */
-  color: #c44242;
+  color: #90a7ab;
    /* dark */
   /*color: #c7c7c7;*/
   font-size: 2em;
-  font-weight: normal;
+  font-weight: 200;
 
 }
 
 h3 {
   /* light */
-  color: #3b3737;
-  font-size: 1.2em;
+  color: #b5ccd0;
+  font-size: 1.1em;
   font-weight: normal;
    /* dark */
   /*color: #c7c7c7;*/
@@ -31,7 +31,9 @@ h3 {
   text-align: center;
   color: #dbdbdb;
   /*font-family: 'Maven Pro', cursive;*/
-  font-family: 'Padauk', sans-serif;
+  /*font-family: 'Padauk', sans-serif;*/
+  font-family: 'Raleway', sans-serif;
+
 
 }
 
@@ -61,14 +63,16 @@ h3 {
 }
 
 .App-header {
-  background-image: url("http://localhost:8080/piano_bg_2.jpg");
-  background-position: top;
-  background-size: 100%;
+}
 
+.App-header-bg  {
+  /*background-image: url("http://localhost:8080/piano_bg_3.jpg");*/
+  background-size: cover;
+  background-position: 0% 100%;
 }
 
 .App-header-container {
-  background: linear-gradient(rgba(207, 204, 204, 0), rgba(7, 11, 31, 0.9));
+  background: linear-gradient(rgba(207, 204, 204, 0), rgba(17, 7, 31, 1));
 
 }
 .App-header-top-container {
@@ -245,7 +249,7 @@ h3 {
   text-align: center;
 }
 
-.App-menu li + li:before {
+.App-menu li + li::before {
   content: ' • ';
   color: #f2eace;
 }
@@ -263,7 +267,6 @@ h3 {
 
 }
 .App-home-sections {
-  background-color: #f0f0f0;
 
   /*background-color: #2f2d2b;*/
 }
@@ -278,6 +281,34 @@ h3 {
   /*font-size: 1.2em;*/
   color: #539e88;
 }
+
+.App-about-genres ul {
+  /*font-size: 1.2em;*/
+  color: #539e88;
+  list-style-type: none;
+  display: inline;
+  padding: 0;
+}
+.App-about-genres li {
+  display: inline-block;
+  /*border: 1px solid white;*/
+}
+.App-about-genres li p {
+  display: inline-block;
+  padding:0 5px 0 5px;
+  border: 1px solid #2f4650;
+  border-radius: 10px;
+}
+
+.App-about-genres li + li::before{
+  content: ', ';
+}
+.App-about-genres li + li:last-child::before{
+  content: ' and ';
+  color: #90a7ab;
+  white-space: pre;
+}
+
 
 .App-tracks{
   /*background-color: #d2d2d2;*/

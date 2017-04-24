@@ -15,8 +15,9 @@ const Tracks = ({ match }) => (
 
 
   <Player audio="http://localhost:8080/tracks/polymagic.mp3" title="Polymagic" description={polymagicDescription}/>
-  <Player audio="http://localhost:8080/tracks/TheNightmareRevelation.wav" title="TheNightmareRevelation"/>
-  <Player audio="http://localhost:8080/tracks/polymagic.mp3" title="Polymagic"/>
+  <Player audio="http://localhost:8080/tracks/TheNightmareRevelation.wav" title="TheNightmareRevelation" description={polymagicDescription}/>
+  <Player audio="http://localhost:8080/tracks/polymagic.mp3" title="Polymagic" description={polymagicDescription}/>
+  <Player audio="http://localhost:8080/tracks/polymagic.mp3" title="Polymagic" description={polymagicDescription}/>
 
   </div>
 )
