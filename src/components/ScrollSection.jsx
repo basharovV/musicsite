@@ -4,11 +4,17 @@ import {Link as ScrollLink, Element, Events, animateScroll, scrollSpy} from 'rea
 import Player from './Player.jsx';
 import About from './About.jsx';
 import Tracks from './Tracks.jsx';
+import DemoReel from './DemoReel.jsx';
 import Contact from './Contact.jsx';
 
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 
+const Separator = () => (
+<div className="App-separator">
+  <div className="App-separator-mask"/>
+</div>
+)
 
 export default class ScrollSection extends Component {
 
@@ -50,43 +56,19 @@ export default class ScrollSection extends Component {
   render() {
   	return (
       <div className="App-home-sections">
-
-        <Router>
-          <div className="App-menu-container">
-            <div className="App-menu">
-
-              <ul>
-                <li><Link to="/">home</Link></li>
-                <li>
-                  <ScrollLink activeClass="App-section-active" to="about" spy={true} smooth={true} offset={50} duration={500} onSetActive={this.handleSetActive}>
-                    <Link to="/#about">about</Link>
-                  </ScrollLink>
-                </li>
-                <li>
-                  <ScrollLink activeClass="App-section-active" to="tracks" spy={true} smooth={true} offset={50} duration={500}>
-                    <Link to="/#tracks">tracks</Link>
-                </ScrollLink>
-                </li>
-                <li>
-                  <ScrollLink activeClass="App-section-active" to="contact" spy={true} smooth={true} offset={50} duration={500}>
-                    <Link to="/#contact">contact</Link>
-                </ScrollLink>
-                </li>
-              </ul>
-              <div className="App-divider"/>
-
-              <Route path="/#about" component={About}/>
-              <Route path="/#tracks" component={Tracks}/>
-            <Route path="/#contact" component={Contact}/>
-
-            </div>
-          </div>
-        </Router>
-
+        {/* <Separator/> */}
         <div id="about">
           <About/>
         </div>
-
+        <div>
+        <svg id="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M0 0 C 50 100 80 100 100 0 Z" />
+        </svg>
+      </div>
+        {/* <Separator/> */}
+        <div id="demoreel">
+          <DemoReel/>
+        </div>
         <div id="tracks">
           <Tracks/>
         </div>
@@ -95,40 +77,7 @@ export default class ScrollSection extends Component {
           <Contact/>
         </div>
 
-
-         {/* <button activeClass="active" className="btn" type="submit" value="Test 2" to="test2" spy={true} smooth={true} offset={50} duration={500} >
-           Contact
-         </button>
-
-
-
-         <Link to="firstInsideContainer" containerId="containerElement">
-           Go to first element inside container
-         </Link>
-
-         <Link to="secondInsideContainer" containerId="containerElement">
-           Go to second element inside container
-         </Link>
-
-
-         <div className="element" id="containerElement">
-           <Element name="firstInsideContainer">
-             first element inside container
-           </Element>
-
-           <Element name="secondInsideContainer">
-             second element inside container
-           </Element>
-         </div> */}
-
-        <a onClick={this.scrollToTop}>To the top!</a>
-        <br/>
-        <a onClick={this.scrollToBottom}>To the bottom!</a>
-        <br/>
-        <a onClick={this.scrollTo}>Scroll to 100px from the top</a>
-        <br/>
-        <a onClick={this.scrollMore}>Scroll 100px more from the current position!</a>
-      </div>
+        <a onClick={this.scrollToTop}>To the top!</a></div>
 	);
   }
 }

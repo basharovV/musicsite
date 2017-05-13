@@ -1,7 +1,11 @@
 import React from 'react';
 import './Player.css';
 import {MdPause, MdPlayArrow} from 'react-icons/lib/md';
+import {FaPlayCircle, FaPauseCircle} from 'react-icons/lib/fa';
+
 import Wavesurfer from 'react-wavesurfer';
+import { Parallax } from 'react-parallax';
+import Truncate from 'react-truncate';
 
 export default class Player extends React.Component {
 
@@ -13,13 +17,13 @@ export default class Player extends React.Component {
       playing: false,
       timeElapsed: '00:00',
       timeRemaining: '00:00',
-      pos: '0'
+      pos: '0',
     };
   };
 
 
   componentWillReceiveProps() {
-    this.setState({ playing: true });
+    // this.setState({ playing: true });
   };
 
   getRemainingTimeText() {
@@ -79,62 +83,87 @@ export default class Player extends React.Component {
   }
 
   render() {
-    const playing = this.state.play;
-    const waveOptions = {
-     scrollParent: true,
-     height: 120,
+    let playing = this.state.playing;
+    let waveOptions = {
+     scrollParent: false,
+     height: 60,
      progressColor: '#9c7272',
-     waveColor: '#dfcdcd',
+     waveColor: '#e2c1c1',
      normalize: true,
      barWidth: 3,
      audioRate:1,
      fillParent: true,
-     scrollParent: false,
      cursorColor: '#bb4f4f'
    };
    console.log(this.props.audio);
     return (
       <div className="Player">
+
         <audio src={this.props.audio}
           ref={(audio) => { this.audio = audio }}
         />
+
         <div className="Player-top">
-          <img className="Player-img" src={"http://localhost:8080/artwork/" + this.state.title + ".jpg"}/>
-          <div className="Player-info">
-            <span className="Player-title">{this.state.title}</span>
-            <span className="Player-description">{this.state.description}</span>
+          <div className="Player-img-container">
+            <img className="Player-img" src={"http://localhost:8080/artwork/" + this.state.title + ".jpg"}/>
           </div>
-          <br/>
-        </div>
+
+            <div className="Player-content">
+              <div key="info" className="Player-info-show">
+                <span className="Player-title">{this.state.title}</span>
+                <span className="Player-tags">
+
+                  <ul>
+                    <li>
+                      {this.props.genre}
+                    </li>
+                    {this.props.tags.map(function(tag) {
+                      return <li>{tag}</li>;
+                    })}
+                  </ul>
+                </span>
+                <Truncate className="Player-description" lines={1} ellipsis={<span>... <a href='/link/to/article'>Read more</a></span>}>
+                  {this.state.description}
+                </Truncate>
+              </div>
+            </div>
+    </div>
+    <br/>
+    <div className="Player-bottom">
+
+      <div className="Player-controls">
+        <div className="Player-play-pause">
+
+          { playing? (
+            // <div onClick={this.play} className={!this.state.play ? "icon ion-play" : "icon ion-pause"} />
+            <FaPauseCircle size={40} onClick={this.handlePlayToggle}/>
+          ): (
+            <FaPlayCircle size={40} onClick={this.handlePlayToggle}/>
+          )}
+          </div>
+
+        {/* <div id="timeline" onClick={this.mouseMove} ref={(timeline) => { this.timeline = timeline }} >
+          <div id="handle" onMouseDown={this.mouseDown} ref={(handle) => { this.handle = handle }}></div>
+        </div> */}
         <br/>
-        <div className="Player-bottom">
-          <div className="Player-wave">
-          <Wavesurfer
-           audioFile={this.props.audio}
-           volume={0.5}
-           playing={this.state.playing}
-           pos={parseFloat(this.state.pos)}
-           options={waveOptions}
-           onPosChange={this.handlePosChange}
-         />
-       </div>
-          <div className="Player-controls">
-            <div className="Player-play-pause">
-            { playing? (
-              // <div onClick={this.play} className={!this.state.play ? "icon ion-play" : "icon ion-pause"} />
-              <MdPause color='red' size={20} onClick={this.handlePlayToggle}/>
-            ): (
-              <MdPlayArrow color='red' size={20} onClick={this.handlePlayToggle}/>
-            )}
-            </div>
-            {/* <div id="timeline" onClick={this.mouseMove} ref={(timeline) => { this.timeline = timeline }} >
-              <div id="handle" onMouseDown={this.mouseDown} ref={(handle) => { this.handle = handle }}></div>
-            </div> */}
-            <div className="Player-time">
-              <div>{this.state.timeElapsed} / </div>
-              <div>{this.state.timeRemaining}</div>
-            </div>
-        </div>
+        {/* <div className="Player-time">
+          <div>{this.state.timeElapsed} / </div>
+          <div>{this.state.timeRemaining}</div>
+        </div> */}
+    </div>
+
+        <div key="wave" className={this.state.playing? "Player-wave-show": "Player-wave-hide"}>
+        <Wavesurfer
+         audioFile={this.props.audio}
+         volume={0.5}
+         playing={this.state.playing}
+         pos={parseFloat(this.state.pos)}
+         options={waveOptions}
+         onPosChange={this.handlePosChange}
+       />
+      </div>
+
+
       </div>
     </div>
     );

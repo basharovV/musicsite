@@ -1,12 +1,14 @@
 
 .Player {
-  font-family: 'Padauk', sans-serif;
+  font-family: 'Raleway', sans-serif;
   /*display: inline-block;*/
   /*align-items: center;*/
   display: inline-block;
   /*padding: 10px;*/
   margin: 10px;
-  overflow: hidden;
+  max-width: 700px;
+  min-width: 200px;
+  /*overflow: hidden;*/
   /*border-radius: 0.6em;*/
   /*border: 2px solid #373735;*/
   /*-webkit-box-shadow: 10px 7px 50px -6px rgba(112,112,112,0.59);
@@ -17,28 +19,72 @@
 }
 
 .Player-top {
-  height: 150px;
-  width: 700px;
+  /*height: 120px;*/
+  width: 100%;
   display: inline-flex;
   /*border-bottom: 1px solid #dddedd;*/
   /*background-color: #f1e9e9;*/
   /*align-items: flex-start;*/
 }
 
-.Player-info  {
-  /*display: block;*/
+.Player-bottom {
+  /*height: 120px;*/
+  display: inline-flex;
+  width: 100%;
+  /*float: left;*/
+}
+
+.Player-content {
+  /*width: 700px;*/
   display: inline-block;
+
+}
+.Player-info-show  {
   padding: 10px;
+  display: inline-block;
+  /*position: absolute;*/
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  opacity: 1.0;
+  width: 100%;
+  z-index: 3;
   /*border: 1px solid #a298a2;*/
   /*background-color: #f1e9e9;*/
   /*align-items: flex-start;*/
 }
-.Player-bottom {
-  height: 120px;
-  width: 500px;
-  display: inline-block;
+
+@media screen and (max-width: 400px) {
+  .Player-info-show {
+    float: none;
+    margin-right:0;
+    width:auto;
+    border:0;
+    border-bottom:2px solid #000;
+  }
 }
 
+.Player-info-hide {
+  display: inline-block;
+  padding: 10px;
+  /*position: absolute;*/
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  width: 100%;
+  opacity: 0.0;
+  z-index: 0;
+}
+
+
+.Player-img-container  {
+  float: left;
+  height: 120px;
+  width: 120px;
+  display: inline-block;
+}
 .Player-img  {
   float: left;
   height: 120px;
@@ -46,18 +92,79 @@
   display: inline-block;
 }
 
-.Player-wave {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-
 .Player-controls {
   /*display: table-cell;*/
-  display: inline-flex;
-  padding: 5px;
+  float: left;
+  height: 60px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  /*flex: 1 1 auto;*/
   /*vertical-align: middle;*/
 }
+
+.Player-play-pause {
+  /*float: left;*/
+  align-content: center;
+  margin:auto;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+  color: #c9b6d6;
+  /*float:left;*/
+  /*position: relative;*/
+  /*height: 20px;*/
+}
+
+.Player-play-pause:hover {
+  /*float: left;*/
+  color: #b12d5d;
+  /*float:left;*/
+  /*position: relative;*/
+  /*height: 20px;*/
+}
+
+.Player-time {
+  font-size: 0.7em;
+  /*vertical-align: middle;*/
+  align-self: center;
+  line-height: 100%;
+  color: #4c494e;
+  vertical-align: middle;
+  /*display: inline-block;*/
+}
+.Player-wave-hide {
+  /*display: block;*/
+  display: inline-block;
+  /*position: absolute;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+
+  flex: 3 1 auto;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+
+.Player-wave-show {
+  /*display: block;*/
+  display: inline-block;
+  flex: 3 1 auto;
+  /*position: absolute;*/
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  opacity: 1.0;
+  z-index: 3;
+}
+
+
 
 #timeline{
     display: flex;
@@ -83,30 +190,14 @@
   /*vertical-align: middle;*/
 }
 
-.Player-play-pause {
-  /*float: left;*/
-  display: inline-block;
-
-  /*float:left;*/
-  /*position: relative;*/
-  /*height: 20px;*/
-}
-
-.Player-time {
-  font-size: 0.7em;
-  /*vertical-align: middle;*/
-  align-self: center;
-  line-height: 100%;
-  color: #4c494e;
-  vertical-align: middle;
-  /*display: inline-block;*/
-}
 .Player-title {
   color: #bdc4c4;
   font-size: 1em;
   display: inline-block;
+  width: 100%;
   text-align: left;
   float: left;
+  font-weight: bold;
 }
 
 .Player-description {
@@ -114,5 +205,31 @@
   font-size: 0.9em;
   display: inline-block;
   text-align: left;
+  width: 400px;
   float: left;
+  /*white-space: nowrap;*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Player-tags ul {
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  float: left;
+}
+.Player-tags li {
+  margin-right: 5px;
+  font-size: 0.9em;
+  color: #a4a4a4;
+  display: inline-block;
+  padding:2px 6px 2px 6px;
+  border: 1px solid #2f4650;
+  border-radius: 10px;
+}
+
+.Player-tags li:first-child{
+  /*border: 1px solid #2f4650;*/
+  background-color: #30736e;
+  /*border-radius: 10px;*/
 }

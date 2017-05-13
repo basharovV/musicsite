@@ -4,16 +4,15 @@ const Contact = () => (
   <div className="App-contact">
     <h2>Contact</h2>
     <h3>
-    I'm available for work in composition and music production!
-    You can get in touch with me below, and have a great sounding original
-    soundtrack to your creative project. 
-    in <span className="App-about-genres">
-      experimental, electronic, jazz, orchestral and ambient
-    </span> styles.
-  </h3>
+      Get in touch with me on slavbacharov@gmail.com for track licensing,
+      composing work, or anything else!</h3>
     <h3>
-      If you are looking for non-traditional soundtrack material,
-      you can find it here. Listen to the available tracks below
+      <div className="App-about-sc-button">
+        SOUNDCLOUD
+      </div>
+      <div className="App-about-vm-button">
+        Vimeo
+      </div>
     </h3>
   </div>
 )

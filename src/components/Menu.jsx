@@ -1,10 +1,13 @@
-import React, {Component} from 'react';
-import About from './About.jsx'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
+import React, { Component } from 'react';
+import {Link as ScrollLink, Element, Events, animateScroll, scrollSpy} from 'react-scroll';
+import Player from './Player.jsx';
+import About from './About.jsx';
+import Tracks from './Tracks.jsx';
+import DemoReel from './DemoReel.jsx';
+import Contact from './Contact.jsx';
+
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 export default class Menu extends Component {
   constructor() {
@@ -20,61 +23,40 @@ export default class Menu extends Component {
 
   render() {
     return (
-      <Router>
+      <div className="App-menu-container">
         <div className="App-menu">
+
           <ul>
-            <li><Link to="/">home</Link></li>
-          <li><Link to="/about">about</Link></li>
-        <li><Link to="/tracks">tracks</Link></li>
+            <li>
+              <ScrollLink activeClass="App-section-active" to="about" spy={true} smooth={true} offset={50} duration={500} onSetActive={this.handleSetActive}>
+                <Link to="/#about">about</Link>
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink activeClass="App-section-active" to="demoreel" spy={true} smooth={true} offset={50} duration={500}>
+                <Link to="/#demoreel">demo reel</Link>
+            </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink activeClass="App-section-active" to="tracks" spy={true} smooth={true} offset={50} duration={500}>
+                <Link to="/#tracks">tracks</Link>
+            </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink activeClass="App-section-active" to="contact" spy={true} smooth={true} offset={50} duration={500}>
+                <Link to="/#contact">contact</Link>
+            </ScrollLink>
+            </li>
           </ul>
+          <div className="App-divider"/>
 
-          <hr/>
+          <Route path="/#about" component={About}/>
+          <Route path="/#demoreel" component={DemoReel}/>
+          <Route path="/#tracks" component={Tracks}/>
+          <Route path="/#contact" component={Contact}/>
 
-          <Route exact path="/" component={Home}/>
-          <Route path="/about" component={About}/>
-          <Route path="/tracks" component={Tracks}/>
         </div>
-      </Router>
+      </div>
     )
   }
 }
-
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-  </div>
-)
-
-const Tracks = ({ match }) => (
-  <div>
-    <h2>Tracks</h2>
-    <ul>
-      <li>
-        <Link to={`${match.url}/rendering`}>
-          Rendering with React
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/components`}>
-          Components
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/props-v-state`}>
-          Props v. State
-        </Link>
-      </li>
-    </ul>
-
-    <Route path={`${match.url}/:topicId`} component={Topic}/>
-    <Route exact path={match.url} render={() => (
-      <h3>Please select a topic.</h3>
-    )}/>
-  </div>
-)
-
-const Topic = ({ match }) => (
-  <div>
-    <h3>{match.params.topicId}</h3>
-  </div>
-)

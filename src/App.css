@@ -1,14 +1,19 @@
+:root {
+  --home-top-color: #111433;
+
+}
+
 body {
   /* light */
-  background-color: rgba(17, 7, 31, 1);
+  /*background-color: #4b6a00;*/
+  background-color: rgb(44, 39, 68);
   /* dark */
   /*background-color: #1f1f1f; */
-
 }
 
 h2 {
   /* light */
-  color: #90a7ab;
+  color: #fff3cd;
    /* dark */
   /*color: #c7c7c7;*/
   font-size: 2em;
@@ -19,13 +24,32 @@ h2 {
 h3 {
   /* light */
   color: #b5ccd0;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: normal;
    /* dark */
   /*color: #c7c7c7;*/
 }
 
 
+.App-separator {
+  width:400px;
+  margin: auto;
+  display: inline-block;
+}
+
+.App-separator-mask {
+    /*overflow:hidden;*/
+    height:20px;
+
+    &:after {
+      content:'';
+      display:block;
+      margin:-25px auto 0;
+      width:100%; height:25px;
+      border-radius:125px / 12px;
+      box-shadow:0 0 8px white;
+    }
+}
 
 .App {
   text-align: center;
@@ -72,8 +96,7 @@ h3 {
 }
 
 .App-header-container {
-  background: linear-gradient(rgba(207, 204, 204, 0), rgba(17, 7, 31, 1));
-
+  background: linear-gradient(rgba(207, 204, 204, 0), var(--home-top-color));
 }
 .App-header-top-container {
 
@@ -147,13 +170,6 @@ h3 {
   color: #8c2b2b
 }
 
-/*Desktops*/
-@media only screen and (min-width: 768px) {
-
-   .App-tagline {
-     font-size: 2.5em;
-   }
-}
 
 .App-tagline p {
   /*display: inline-block;*/
@@ -218,20 +234,30 @@ h3 {
   83.3%,95.96% {transform:translate3d(0,-25%,0);}
 }
 
+.App-arrow-down {
+  margin: auto;
+}
 .App-music-player {
   background-color: rgb(0, 148, 99);
 }
 
 .App-menu-container {
   width: 100%;
+  background-color: var(--home-top-color);
 }
 
 
 .App-menu {
   display: inline-block;
   z-index: 1;
-  /*position: relative;*/
   margin: auto;
+  /*position: relative;*/
+  display: inline-block;
+  padding: 5px 8px;
+  border: 1px dashed #82321d;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px 5px rgba(106, 17, 52, 0.4), 0px 0px 15px 5px rgba(98, 55, 14, 0.4) inset;
+
   /*border-bottom: #3d0b16 solid 2px;*/
 }
 
@@ -254,32 +280,85 @@ h3 {
   color: #f2eace;
 }
 
-.App-menu li a {
+.App-menu li a > a{
   text-align: center;
   text-decoration: none;
-  padding: 0;
+  /*padding: 0;*/
   font-size: 20pt;
-  color: #999999;
+  color: #f0f0f0;
+  display: inline-block;
 }
 
-.App-menu li a:hover {
-  text-shadow: 1px 1px 6px #b6aab0;
-
+.App-menu li a>a:hover {
+  text-shadow: 1px 1px 8px #2e2faa;
+  text-decoration: line-through;
+  color: #f67d7d;
 }
 .App-home-sections {
 
   /*background-color: #2f2d2b;*/
 }
+#about {
+  /*background-color: #16051f;*/
+  background-color: var(--home-top-color);
+}
 .App-about {
   /*background-color: #d2d2d2;*/
   /*height:500px;*/
-  padding-left: 1em;
-  padding-right: 1em;
+  display: inline-block;
+  padding: 1em;
+  margin: auto;
+  /*height: 300px;*/
 }
 
+.App-about-photo {
+  height: 200px;
+  width: 200px;
+  vertical-align: middle;
+  align-self: center;
+  float: right;
+}
+
+.App-about-left {
+  /*background-color: #d2d2d2;*/
+  /*height:500px;*/
+  border-right: 1px solid #604158;
+  width: 500px;
+  /*display: flex;*/
+  text-align: right;
+
+}.App-about-right {
+  /*background-color: #d2d2d2;*/
+  /*height:500px;*/
+  display: inline-block;
+  width: 500px;
+  margin: auto;
+  vertical-align: top;
+  padding: 1em;
+  text-align: left;
+}
+
+.App-about-sc-button {
+  display: inline-block;
+  border: 1px solid #e2e3de;
+  color: #fa6709;
+  text-size: 1em;
+  padding: 1em;
+  margin: 1em;
+}
+
+.App-about-vm-button {
+  margin: 1em;
+  display: inline-block;
+  border: 1px solid #098dfa;
+  color: #098dfa;
+  text-size: 1em;
+  padding: 1em;
+}
 .App-about-genres {
   /*font-size: 1.2em;*/
   color: #539e88;
+  display: block;
 }
 
 .App-about-genres ul {
@@ -303,12 +382,38 @@ h3 {
 .App-about-genres li + li::before{
   content: ', ';
 }
-.App-about-genres li + li:last-child::before{
+/*.App-about-genres li + li:last-child::before{
   content: ' and ';
   color: #90a7ab;
   white-space: pre;
+}*/
+#curveDownColor {
+  /*fill: #16051f;*/
+  fill: var(--home-top-color);
+  display: inline-block;
+	/*stroke: #889695;*/
+
+}
+.App-featured-video {
+  display: inline-block;
+  border: 1.5px solid #82321d;
+}
+.App-featured-info {
+  width: 400px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  padding: 5px;
+  margin-left: 10px;
+}
+.App-featured-title {
+  top: 0px;
+  width: 300px;
 }
 
+.App-featured-description {
+  /*display: inline-block;*/
+}
 
 .App-tracks{
   /*background-color: #d2d2d2;*/
@@ -316,4 +421,62 @@ h3 {
   display: inline-block;
   padding-left: 1em;
   padding-right: 1em;
+}
+
+.App-contact {
+  /*height:500px;*/
+  margin-top: 40px;
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.App-all-tracks-button {
+  padding: 10px;
+  height: 30px;
+  width: 120px;
+  background-color: rgba(#424141, 0.4);
+  border: 1px solid #d9c2c2;
+  margin: auto;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.App-all-tracks-button a {
+  /*border-radius: 5px;*/
+  /*font-family: 'Raleway', sans-serif;*/
+  font-family: 'Amatica SC', cursive;
+  font-size: 1.7em;
+  text-decoration: none;
+  color: #b17d8b;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.App-all-tracks-button:hover {
+  color: white;
+  background-color: rgba(140, 55, 55, 0.43);
+}
+/*Desktops*/
+@media only screen and (min-width: 768px) {
+
+   .App-tagline {
+     font-size: 2.5em;
+   }
+
+   .App-about {
+     width: 768px;
+     margin: auto;
+     /*background-color: #d2d2d2;*/
+     /*height:500px;*/
+     /*padding-left: 4em;
+     padding-right: 4em;*/
+   }
+}
+
+.App-trackspage {
+  height: 40px;
 }

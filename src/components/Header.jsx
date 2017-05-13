@@ -103,9 +103,7 @@ export default class Header extends Component {
             <div className="App-header-top">
               <AppIcon className="App-logo"/>
               <canvas className="App-sine-waves" id="waves" height="150px"/>
-              <div className="App-arrow">
-                <FontAwesome name="fa fa-angle-down"/>
-              </div>
+
             </div>
           </div>
         <div className="App-header-bottom">
@@ -122,9 +120,10 @@ export default class Header extends Component {
               <li>film?</li>
               <li>show?</li>
               <li>game?</li>
-              <li>ad</li>
+              <li>ad?</li>
             </ul>
           </div>
+          <br/>
         </div>
       </div>
     </Parallax>
