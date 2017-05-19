@@ -2,11 +2,14 @@ import React from 'react';
 import './Player.css';
 import {MdPause, MdPlayArrow} from 'react-icons/lib/md';
 import {FaPlayCircle, FaPauseCircle} from 'react-icons/lib/fa';
-
 import Wavesurfer from 'react-wavesurfer';
 import { Parallax } from 'react-parallax';
 import Truncate from 'react-truncate';
 
+/*
+  Player class with descriptive state and tag filter mechanism.
+  Description expand/truncate from https://github.com/One-com/react-truncate
+*/
 export default class Player extends React.Component {
 
   constructor(props) {
@@ -18,9 +21,25 @@ export default class Player extends React.Component {
       timeElapsed: '00:00',
       timeRemaining: '00:00',
       pos: '0',
+      expanded: false,
+      truncated: false
     };
   };
 
+  handleTruncate(truncated) {
+          if (this.state.truncated !== truncated) {
+              this.setState({
+                  truncated: truncated
+              });
+          }
+      }
+
+  toggleLines(event) {
+          event.preventDefault();
+          this.setState({
+              expanded: !this.state.expanded
+          });
+      }
 
   componentWillReceiveProps() {
     // this.setState({ playing: true });
@@ -96,35 +115,45 @@ export default class Player extends React.Component {
      cursorColor: '#bb4f4f'
    };
    console.log(this.props.audio);
+   let expanded = this.state.expanded;
+   let truncated = this.state.truncated;
+
     return (
       <div className="Player">
-
         <audio src={this.props.audio}
           ref={(audio) => { this.audio = audio }}
         />
-
         <div className="Player-top">
           <div className="Player-img-container">
-            <img className="Player-img" src={"http://localhost:8080/artwork/" + this.state.title + ".jpg"}/>
+            <img className="Player-img" src={this.props.artwork}/>
           </div>
-
             <div className="Player-content">
               <div key="info" className="Player-info-show">
                 <span className="Player-title">{this.state.title}</span>
                 <span className="Player-tags">
-
                   <ul>
-                    <li>
+                    <li className="Player-tag-genre">
                       {this.props.genre}
                     </li>
                     {this.props.tags.map(function(tag) {
-                      return <li>{tag}</li>;
-                    })}
+                      if (this.props.filterTags.includes(tag)) {
+                        return <li className="Player-tag-filtered">{tag}</li>;
+                      }
+                      return <li className="Player-tag-default">{tag}</li>;
+                    }, this)}
                   </ul>
                 </span>
-                <Truncate className="Player-description" lines={1} ellipsis={<span>... <a href='/link/to/article'>Read more</a></span>}>
+                <Truncate className="Player-description"
+                  lines={!expanded && 1}
+                  ellipsis={(
+                      <span>... <a href='#' onClick={this.toggleLines.bind(this)}>Show more</a></span>
+                  )}
+                  onTruncate={this.handleTruncate}>
                   {this.state.description}
-                </Truncate>
+              </Truncate>
+              {!truncated && expanded && (
+                  <span> <a href='#' onClick={this.toggleLines.bind(this)}>Show less</a></span>
+              )}
               </div>
             </div>
     </div>
@@ -151,7 +180,6 @@ export default class Player extends React.Component {
           <div>{this.state.timeRemaining}</div>
         </div> */}
     </div>
-
         <div key="wave" className={this.state.playing? "Player-wave-show": "Player-wave-hide"}>
         <Wavesurfer
          audioFile={this.props.audio}
@@ -162,8 +190,6 @@ export default class Player extends React.Component {
          onPosChange={this.handlePosChange}
        />
       </div>
-
-
       </div>
     </div>
     );

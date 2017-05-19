@@ -70,7 +70,8 @@ export default class ScrollSection extends Component {
           <DemoReel/>
         </div>
         <div id="tracks">
-          <Tracks/>
+          <h2>Tracks</h2>
+          <Tracks featured="true"/>
         </div>
 
         <div id="contact">
