@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Header from './components/Header.jsx';
 import Menu from './components/Menu.jsx';
 import TracksPage  from './components/TracksPage.jsx';
-import ScrollSection from './components/ScrollSection.jsx'
+import ScrollSection from './components/ScrollSection.jsx';
+import Footer from './components/Footer.jsx';
 import Helmet from 'react-helmet'
 import './App.css';
 import {
@@ -29,6 +30,7 @@ class App extends Component {
           <Route exact path="/" component={ScrollSection}/>
           <Route path="/tracks" component={TracksPage}/>
         </div>
+        <Footer/>
       </div>
     );
   }

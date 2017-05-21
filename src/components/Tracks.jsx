@@ -73,9 +73,7 @@ class Tracks extends Component {
 
         </ul>
         <br/>
-        <div href="" className="App-all-tracks-button">
-          <Link to="/tracks">All tracks</Link>
-        </div>
+
       </div>
     )}
 }

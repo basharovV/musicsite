@@ -146,14 +146,15 @@ export default class Player extends React.Component {
                 <Truncate className="Player-description"
                   lines={!expanded && 1}
                   ellipsis={(
-                      <span>... <a href='#' onClick={this.toggleLines.bind(this)}>Show more</a></span>
+                      <span className="Player-description-truncate">... <a href='#' onClick={this.toggleLines.bind(this)}>Show more</a></span>
                   )}
                   onTruncate={this.handleTruncate}>
                   {this.state.description}
+                  😁
+                  {!truncated && expanded && (
+                      <span className="Player-description-truncate"> <a href='#' onClick={this.toggleLines.bind(this)}>Show less</a></span>
+                  )}
               </Truncate>
-              {!truncated && expanded && (
-                  <span> <a href='#' onClick={this.toggleLines.bind(this)}>Show less</a></span>
-              )}
               </div>
             </div>
     </div>

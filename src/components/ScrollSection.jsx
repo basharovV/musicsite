@@ -73,12 +73,13 @@ export default class ScrollSection extends Component {
           <h2>Tracks</h2>
           <Tracks featured="true"/>
         </div>
-
+        <div href="" className="App-all-tracks-button">
+          <Link to="/tracks">All tracks</Link>
+        </div>
         <div id="contact">
           <Contact/>
         </div>
-
-        <a onClick={this.scrollToTop}>To the top!</a></div>
+      </div>
 	);
   }
 }

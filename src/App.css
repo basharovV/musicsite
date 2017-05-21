@@ -11,6 +11,12 @@ body {
   /*background-color: #1f1f1f; */
 }
 
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
 h2 {
   /* light */
   color: #fff3cd;
@@ -437,15 +443,13 @@ h3 {
 }
 .App-tracks{
   /*background-color: #d2d2d2;*/
-  height:500px;
   width: 100%;
   display: inline-block;
-  padding-left: 1em;
-  padding-right: 1em;
 }
 
 .App-track-list {
   list-style: none;
+  display: inline-block;
 }
 
 .App-track-list li {
@@ -553,5 +557,35 @@ h3 {
 }
 
 .App-trackspage {
-  height: 40px;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+.App-footer {
+  width: 100%;
+  display: inline-flex;
+  height: 100px;
+  color: rgb(140, 114, 114);
+  font-size: 0.9em;
+  background-color: rgb(23, 22, 42);
+}
+.App-footer a {
+  color: #8c7272;
+}
+
+.App-footer ul {
+  padding: 10px;
+  margin: auto;
+  list-style: none;
+}
+.App-footer li{
+  flex: auto;
+  display: inline-block;
+  padding: 10px 10px;
+}
+.App-footer li + li{
+  border-left: 1px solid #322f46;
+}
+.App-footer li + li::before {
+  /*content: ' • ';*/
 }

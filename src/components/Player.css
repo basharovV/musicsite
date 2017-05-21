@@ -219,6 +219,15 @@
   text-overflow: ellipsis;
 }
 
+.Player-description-truncate a {
+  color: #afb566;
+}
+
+.Player-description-truncate {
+  white-space: nowrap;
+  display: inline-block;
+}
+
 .Player-tags ul {
   padding: 0;
   list-style: none;
