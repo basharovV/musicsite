@@ -92,7 +92,7 @@ export default class Header extends Component {
   render () {
     return (
       <div className="App-header">
-        <Parallax bgImage="http://localhost:5000/piano_bg_6.jpg" strength={200}
+        <Parallax bgImage="piano_bg_6.jpg" strength={200}
         style={{
           backgroundSize: 'cover',
           backgroundPosition: "0% 200%"
