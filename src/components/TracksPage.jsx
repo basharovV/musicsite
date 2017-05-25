@@ -107,6 +107,8 @@ class TracksPage extends Component {
                 onClick={this.handleTagClick.bind(this)}
                 renderer={this.tagRenderer}/>
         <Tracks featured="false" filterTags={this.state.tagFilterQuery}/>
+        {/* <h3>Choose by emoji</h3> */}
+
       </div>
     )
   }

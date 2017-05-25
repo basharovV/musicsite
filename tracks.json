@@ -1,0 +1,58 @@
+{
+  "tracks": [
+    {
+      "audio": "http://localhost:5000/static/tracks/The%20Nightmare%20Revelation/The%20Nightmare%20Revelation.mp3",
+      "artwork": "http://localhost:5000/static/tracks/The%20Nightmare%20Revelation/artwork.jpg",
+      "title": "The Nightmare Revelation",
+      "description": "This track is inspired by the music of Dirk Gently's Hollistic Detective Agency. The first part is glitchty, experimental and electronic, while the second is a wide rhythmic synth arpeggio sequence with overlaying bursts of piano.",
+      "genre": "Experimental",
+      "tags": ["electronic", "piano", "synth"],
+      "featured": "true"
+    },
+    {
+      "audio": "http://localhost:5000/static/tracks/Rise%20and%20Fall/Rise%20and%20Fall.mp3",
+      "artwork": "http://localhost:5000/static/tracks/Rise%20and%20Fall/artwork.jpg",
+      "title": "Rise and Fall",
+      "description": "An ambient string soundscape, reminiscent of an ethereal cosmos. Slowly building and moving from deep pauses to a final chord progression with a pleasant cadence",
+      "genre": "Cinematic",
+      "tags": ["orchestral", "strings", "ambient"],
+      "featured": "true"
+    },
+    {
+      "audio": "http://localhost:5000/static/tracks/Polymagic/Polymagic.mp3",
+      "artwork": "http://localhost:5000/static/tracks/Polymagic/artwork.jpg",
+      "title": "Polymagic",
+      "description": "This track has an interesting rhythm and jazzy breaks in between. Although some samples and synths are used, the track maintains it's acoustic feel. The ending is a improvisational take on the Harry Potter theme",
+      "genre": "Jazz fusion",
+      "tags": ["jazz", "piano", "synth"],
+      "featured": "true"
+    },
+    {
+      "audio": "http://localhost:5000/static/tracks/Memento%20Mori/Memento%20Mori.mp3",
+      "artwork": "http://localhost:5000/static/tracks/Memento%20Mori/artwork.jpg",
+      "title": "Memento Mori",
+      "description": "Heavily sample based, this track blends raw orchestral instruments with synth samples. Flutes, clarinets, double bass, violins, and cello make short but meaningful appearances in this track. The percussion plays with irregularity, while the melodies are more rhythmic",
+      "genre": "Jazz fusion",
+      "tags": ["electronic", "rhythm", "mysterious"],
+      "featured": "true"
+    },
+    {
+      "audio": "http://localhost:5000/static/tracks/Echoes%20Of%20A%20Lost%20City/Echoes%20Of%20A%20Lost%20City.mp3",
+      "artwork": "http://localhost:5000/static/tracks/Echoes%20Of%20A%20Lost%20City/artwork.jpg",
+      "title": "Echoes Of A Lost City",
+      "description": "",
+      "genre": "Jazz fusion",
+      "tags": ["jazz", "piano", "synth"],
+      "featured": "false"
+    },
+    {
+      "audio": "http://localhost:5000/static/tracks/Analog%20Cityman/Analog%20Cityman.mp3",
+      "artwork": "http://localhost:5000/static/tracks/Analog%20Cityman/artwork.jpg",
+      "title": "Analog Cityman",
+      "description": "",
+      "genre": "Experimental",
+      "tags": ["electronic", "piano", "minimalism"],
+      "featured": "false"
+    }
+  ]
+}
