@@ -131,6 +131,14 @@ h3 {
   display: flex;
   align-self: center;
 }
+
+.App-header-social-links a {
+  color: white;
+
+  :visited {
+    color: white;
+  }
+}
 .App-header-social-links ul {
     list-style: none;
     margin: auto;

@@ -13,6 +13,7 @@ const About = () => (
       <h3>On this website you will find a growing library of tracks
       in a broad range of styles, including <span className="App-about-genres">
         <ul>
+          <li><p>orchestral</p></li>
           <li><p>experimental</p></li>
           <li><p>electronic</p></li>
           <li><p>jazz</p></li>
@@ -22,9 +23,9 @@ const About = () => (
   </h3>
   <div className="App-header-social-links">
     <ul>
-      <li><FaSoundcloud/></li>
-      <li><FaVimeo/></li>
-      <li><FaInstagram/></li>
+      <li><a href="https://soundcloud.com/vbash"><FaSoundcloud/></a></li>
+      <li><a href="https://vimeo.com/vbash"><FaVimeo/></a></li>
+      <li><a href="https://instagram.com/slav_basharov/"><FaInstagram/></a></li>
   </ul>
 </div>
 

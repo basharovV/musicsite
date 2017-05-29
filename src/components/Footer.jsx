@@ -36,7 +36,7 @@ class Footer extends Component {
           }}><FaVimeo/>
             <b><a href="https://vimeo.com/vbash"> Vimeo</a></b>
           </li>
-          <li style={{'font-size': '0.8em'}}>Website by Vyacheslav Basharov Check it out on
+          <li style={{'font-size': '0.8em'}}>Website by Vyacheslav Basharov. Check out the code on
             <a style={{color: '#bfbfbf'}}> <FaGithub/> Github</a>
           </li>
         </ul>

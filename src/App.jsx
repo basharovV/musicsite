@@ -16,6 +16,7 @@ class App extends Component {
     return (
       <div className="App">
         <Helmet>
+          <title>Vyacheslav Basharov | Composer</title>
           <style>
             @import url('https://fonts.googleapis.com/css?family=Amatica+SC');
             @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
