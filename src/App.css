@@ -14,6 +14,7 @@ body {
 a {
   cursor: pointer;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 
@@ -126,6 +127,22 @@ h3 {
   background-size: 100%;
 
 }
+.App-header-social-links {
+  display: flex;
+  align-self: center;
+}
+.App-header-social-links ul {
+    list-style: none;
+    margin: auto;
+    display: inline-block;
+    padding: 0;
+}
+
+.App-header-social-links li {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0;
+}
 
 .App-title {
   display: inline;
@@ -142,6 +159,7 @@ h3 {
 .App-title::after {
   content: " • ";
   color: #147e35;
+  text-shadow: none;
 }
 .App-subtitle {
   display: inline;
@@ -288,6 +306,20 @@ h3 {
   content: ' • ';
   color: #f2eace;
 }
+.App-menu li a {
+  text-align: center;
+  text-decoration: none;
+  /*padding: 0;*/
+  font-size: 20pt;
+  color: #f0f0f0;
+  display: inline-block;
+}
+
+.App-menu li a:hover {
+  text-shadow: 1px 1px 8px #2e2faa;
+  text-decoration: line-through;
+  color: #cd5757;
+}
 
 .App-menu li a > a{
   text-align: center;
@@ -301,7 +333,7 @@ h3 {
 .App-menu li a>a:hover {
   text-shadow: 1px 1px 8px #2e2faa;
   text-decoration: line-through;
-  color: #f67d7d;
+  color: #cd5757;
 }
 .App-home-sections {
 
@@ -349,20 +381,39 @@ h3 {
 
 .App-about-sc-button {
   display: inline-block;
-  border: 1px solid #e2e3de;
   color: #fa6709;
   text-size: 1em;
   padding: 1em;
   margin: 1em;
+  transition: 0.3s;
+  border: 1px solid transparent;
+
+}
+
+.App-about-sc-button:hover {
+  border: 1px solid #e2e3de;
+}
+
+.App-about-sc-button a {
+  color: #fa4b00;
 }
 
 .App-about-vm-button {
   margin: 1em;
   display: inline-block;
-  border: 1px solid #098dfa;
   color: #098dfa;
   text-size: 1em;
   padding: 1em;
+  transition: 0.3s;
+  border: 1px solid transparent;
+
+}
+.App-about-vm-button:hover {
+  border: 1px solid #e2e3de;
+}
+
+.App-about-vm-button a {
+  color: #0073fa;
 }
 .App-about-genres {
   /*font-size: 1.2em;*/

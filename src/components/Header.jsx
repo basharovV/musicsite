@@ -7,6 +7,7 @@ import FontAwesome from 'react-fontawesome';
 import Blur from 'react-blur';
 import AppIcon from './Icons.jsx';
 import { Parallax, Background } from 'react-parallax';
+import {FaSoundcloud, FaVimeo, FaGithub, FaInstagram} from 'react-icons/lib/fa';
 
 
 export default class Header extends Component {
@@ -92,7 +93,7 @@ export default class Header extends Component {
   render () {
     return (
       <div className="App-header">
-        <Parallax bgImage="piano_bg_6.jpg" strength={200}
+        <Parallax bgImage={process.env.REACT_APP_STATIC_URL + 'piano_bg_6.jpg'} strength={200}
         style={{
           backgroundSize: 'cover',
           backgroundPosition: "0% 200%"

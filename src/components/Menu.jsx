@@ -38,9 +38,7 @@ export default class Menu extends Component {
             </ScrollLink>
             </li>
             <li>
-              <ScrollLink activeClass="App-section-active" to="tracks" spy={true} smooth={true} offset={50} duration={500}>
-                <Link to="/#tracks">tracks</Link>
-            </ScrollLink>
+              <Link className="App-section-active" to="/tracks">tracks</Link>
             </li>
             <li>
               <ScrollLink activeClass="App-section-active" to="contact" spy={true} smooth={true} offset={50} duration={500}>

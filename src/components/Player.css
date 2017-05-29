@@ -223,9 +223,11 @@
   color: #afb566;
 }
 
+
 .Player-description-truncate {
-  white-space: nowrap;
   display: inline-block;
+  white-space: nowrap;
+
 }
 
 .Player-tags ul {

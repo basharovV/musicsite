@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {FaSoundcloud, FaVimeo, FaInstagram} from 'react-icons/lib/fa'
 const About = () => (
   <div className="App-about">
     {/* <div className="App-about-left">
@@ -20,7 +20,13 @@ const About = () => (
         </ul>
     </span>  and more!
   </h3>
-
+  <div className="App-header-social-links">
+    <ul>
+      <li><FaSoundcloud/></li>
+      <li><FaVimeo/></li>
+      <li><FaInstagram/></li>
+  </ul>
+</div>
 
 </div>
   {/* <h3>

@@ -15,6 +15,7 @@ export default class Player extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      audio: process.env.REACT_APP_STATIC_URL + props.audio,
       title: props.title,
       description: props.description,
       playing: false,
@@ -117,15 +118,15 @@ export default class Player extends React.Component {
    console.log(this.props.audio);
    let expanded = this.state.expanded;
    let truncated = this.state.truncated;
-
+   let audioPath = this.state.audio;
     return (
       <div className="Player">
-        <audio src={this.props.audio}
+        <audio src={audioPath}
           ref={(audio) => { this.audio = audio }}
         />
         <div className="Player-top">
           <div className="Player-img-container">
-            <img className="Player-img" src={this.props.artwork}/>
+            <img className="Player-img" src={process.env.REACT_APP_STATIC_URL + this.props.artwork}/>
           </div>
             <div className="Player-content">
               <div key="info" className="Player-info-show">
@@ -146,13 +147,13 @@ export default class Player extends React.Component {
                 <Truncate className="Player-description"
                   lines={!expanded && 1}
                   ellipsis={(
-                      <span className="Player-description-truncate">... <a href='#' onClick={this.toggleLines.bind(this)}>Show more</a></span>
+                      <span className="Player-description-truncate">... <a href='#' onClick={this.toggleLines.bind(this)}> Show more</a></span>
                   )}
-                  onTruncate={this.handleTruncate}>
+                  onTruncate={this.handleTruncate.bind(this)}>
                   {this.state.description}
-                  😁
+                  {/* 😁 */}
                   {!truncated && expanded && (
-                      <span className="Player-description-truncate"> <a href='#' onClick={this.toggleLines.bind(this)}>Show less</a></span>
+                      <span className="Player-description-truncate"> • <a href='#' onClick={this.toggleLines.bind(this)}> Show less</a></span>
                   )}
               </Truncate>
               </div>
@@ -183,7 +184,7 @@ export default class Player extends React.Component {
     </div>
         <div key="wave" className={this.state.playing? "Player-wave-show": "Player-wave-hide"}>
         <Wavesurfer
-         audioFile={this.props.audio}
+         audioFile={audioPath}
          volume={0.5}
          playing={this.state.playing}
          pos={parseFloat(this.state.pos)}
