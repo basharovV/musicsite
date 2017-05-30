@@ -8,7 +8,7 @@ import Blur from 'react-blur';
 import AppIcon from './Icons.jsx';
 import { Parallax, Background } from 'react-parallax';
 import {FaSoundcloud, FaVimeo, FaGithub, FaInstagram} from 'react-icons/lib/fa';
-
+import { Link } from 'react-router-dom';
 
 export default class Header extends Component {
 
@@ -93,7 +93,7 @@ export default class Header extends Component {
   render () {
     return (
       <div className="App-header">
-        <Parallax bgImage={process.env.REACT_APP_STATIC_URL + 'piano_bg_6.jpg'} strength={200}
+        <Parallax bgImage={process.env.REACT_APP_STATIC_URL + 'assets/piano_bg_6.jpg'} strength={200}
         style={{
           backgroundSize: 'cover',
           backgroundPosition: "0% 200%"
@@ -102,17 +102,17 @@ export default class Header extends Component {
           <div className="App-header-top-container">
             {/* <img className="App-header-bg" src="http://localhost:8080/piano_bg_2.jpg" /> */}
             <div className="App-header-top">
-              <AppIcon className="App-logo"/>
+              <Link to="/"><AppIcon className="App-logo"/></Link>
               <canvas className="App-sine-waves" id="waves" height="150px"/>
 
             </div>
           </div>
         <div className="App-header-bottom">
           <div className="App-title">
-              Vyacheslav Basharov
+            <Link to="/">Vyacheslav Basharov</Link>
           </div>
           <div className="App-subtitle">
-                Composer
+            <Link to="/">Composer</Link>
           </div>
           <br/>
           <div className="App-tagline">

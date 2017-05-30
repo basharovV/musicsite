@@ -18,7 +18,6 @@ class App extends Component {
         <Helmet>
           <title>Vyacheslav Basharov | Composer</title>
           <style>
-            @import url('https://fonts.googleapis.com/css?family=Amatica+SC');
             @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
             @import url('https://fonts.googleapis.com/css?family=Raleway:200,400,700');
             @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');

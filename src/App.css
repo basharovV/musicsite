@@ -3,6 +3,15 @@
 
 }
 
+@font-face {
+  font-family: 'Amatica SC';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/AmaticaSC-Regular.ttf'); /* IE9 Compat Modes */
+  src: local('Open Sans'), local('OpenSans'),
+       url('/fonts/AmaticaSC-Regular.ttf') format('truetype'), /* IE6-IE8 */
+}
+
 body {
   /* light */
   /*background-color: #4b6a00;*/
@@ -164,6 +173,10 @@ h3 {
   text-shadow: 0 0 20px #8b1010, 0 0 30px #9d5050, 0 0 40px #182981;
 }
 
+.App-title a {
+  color: #8c2b2b;
+}
+
 .App-title::after {
   content: " • ";
   color: #147e35;
@@ -178,6 +191,10 @@ h3 {
   color: #949590;
   z-index: 1;
   line-height: 60px;
+}
+
+.App-subtitle a {
+  color: #949590;
 }
 
 .App-sine-waves {
