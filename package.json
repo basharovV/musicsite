@@ -50,6 +50,7 @@
     "react-dom": "^15.5.4",
     "react-flip-move": "^2.9.11",
     "react-fontawesome": "^1.5.0",
+    "react-ga": "^2.2.0",
     "react-helmet": "^5.0.2",
     "react-icons": "^2.2.3",
     "react-load-script": "0.0.2",
