@@ -10,8 +10,19 @@ import {
   BrowserRouter as Router,
   Route, Switch,  Link, browserHistory
 } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 class App extends Component {
+  constructor() {
+    super();
+    ReactGA.initialize('UA-100251861-1');
+  }
+
+  logPageView() { // add this function to your component
+    ReactGA.set({ page: window.location.pathname + window.location.search });
+    ReactGA.pageview(window.location.pathname + window.location.search);
+}
+
   render() {
     return (
       <div className="App">
@@ -33,8 +44,8 @@ class App extends Component {
         <Menu/>
         {/* <div className="App-separator"/> */}
         <div>
-          <Route exact path="/" component={ScrollSection}/>
-          <Route path="/tracks" component={TracksPage}/>
+          <Route exact path="/"  onUpdate={this.logPageView.bind(this)} component={ScrollSection}/>
+          <Route path="/tracks"  onUpdate={this.logPageView.bind(this)} component={TracksPage}/>
         </div>
         <Footer/>
       </div>

@@ -4,7 +4,7 @@ const Contact = () => (
   <div className="App-contact">
     <h2>Contact</h2>
     <h3>
-      Get in touch with me on <a style={{color: 'white'}} href="mailto:contact@vyacheslavbasharov.com">contact@vyacheslavbasharov.com</a> for track licensing,
+      Get in touch with me on <a style={{color: '#94d9ff'}} href="mailto:contact@vyacheslavbasharov.com">contact@vyacheslavbasharov.com</a> for track licensing,
       composing work, or anything else!</h3>
     <h3>...or send me a message on:</h3>
     <h3>
