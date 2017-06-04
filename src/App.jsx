@@ -32,6 +32,7 @@ class App extends Component {
           <link rel="manifest" href="/manifest.json"/>
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
           <meta name="theme-color" content="#ffffff"/>
+          <meta name="Description" content="Vyacheslav Basharov is a Russian born composer and producer of soundtracks and music for film, games and advertisements, with a focus on experimental and electronic styles. Currently based in London."/>
         </Helmet>
         <Header/>
         <Menu/>
