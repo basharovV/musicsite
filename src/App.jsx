@@ -6,6 +6,9 @@ import ScrollSection from './components/ScrollSection.jsx';
 import Footer from './components/Footer.jsx';
 import Helmet from 'react-helmet'
 import Blog from './components/Blog.jsx';
+import { WrappedBlogPost } from './components/BlogPost.jsx';
+import { StickyContainer, Sticky } from 'react-sticky';
+
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -25,6 +28,7 @@ class App extends Component {
           <style>
             @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
             @import url('https://fonts.googleapis.com/css?family=Raleway:200,400,700');
+            @import url('https://fonts.googleapis.com/css?family=Rubik:300,400,400i,700');
             @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
           </style>
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
@@ -35,14 +39,15 @@ class App extends Component {
           <meta name="theme-color" content="#ffffff"/>
           <meta name="Description" content="Vyacheslav Basharov is a Russian born composer and producer of soundtracks and music for film, games and advertisements, with a focus on experimental and electronic styles. Currently based in London."/>
         </Helmet>
-        <Header/>
-        <Menu/>
-        {/* <div className="App-separator"/> */}
-        <div>
-          <Route exact path="/" component={ScrollSection}/>
-          <Route path="/tracks" component={TracksPage}/>
-          <Route path="/blog" component={Blog}/>
-        </div>
+          <Header/>
+          <Menu/>
+          {/* <div className="App-separator"/> */}
+          <div>
+            <Route exact path="/" component={ScrollSection}/>
+            <Route path="/tracks" component={TracksPage}/>
+            <Route exact path="/blog" component={Blog}/>
+            <Route path="/blog/:post" component={WrappedBlogPost}/>
+          </div>
         <Footer/>
       </div>
     );

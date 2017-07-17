@@ -1,0 +1,87 @@
+.App-blog-container {
+  width: 100%;
+  background-color: rgb(235, 219, 190);
+}
+
+.App-blog {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.App-blog-post-title {
+  display: inline-block;
+  margin: 0;
+  float: left;
+  font-family: 'Amatica SC', cursive;
+  font-size: 2.5em;
+  /*font-family: 'Cabin Sketch', cursive;*/
+  transition: 0.3s;
+
+}
+.App-blog-post-title:hover {
+  transition: 0.3s;
+  color: #2d7aff;
+
+}
+.App-blog-post-title-container {
+  display: inline-block;
+  line-height: normal;
+  margin: 0;
+  float: left;
+  width: 100%;
+}
+
+.App-blog-post-info-container {
+  float: left;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-blog-post-author {
+  display: inline-block;
+  color: #6e777c;
+  float: right;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.App-blog-post-date {
+  display: inline-block;
+  color: #6e777c;
+  font-size: 0.9em;
+}
+
+.App-blog-post-date::before {
+    content: ' \2219';
+  }
+
+.App-blog-post-body {
+  display: inline-block;
+  text-align: left;
+}
+
+.App-blog-post-header {
+    display: inline-block;
+    width: 100%;
+}
+
+.App-divider {
+  margin-top: 10px;
+  height: 1px;
+  border-color: #e81010;
+  border-bottom: 2px;
+  background-color:  #860d0d;
+}
+
+@media only screen and (min-width: 768px) {
+   .App-blog {
+     width: 768px;
+     margin: auto;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     max-width: 768px;
+   }
+}

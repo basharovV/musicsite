@@ -9,6 +9,7 @@ import AppIcon from './Icons.jsx';
 import { Parallax, Background } from 'react-parallax';
 import {FaSoundcloud, FaVimeo, FaGithub, FaInstagram} from 'react-icons/lib/fa';
 import { Link } from 'react-router-dom';
+import { StickyContainer, Sticky } from 'react-sticky';
 
 export default class Header extends Component {
 
@@ -93,12 +94,15 @@ export default class Header extends Component {
   render () {
     return (
       <div className="App-header">
+        <div className="App-top-line"/>
         <Parallax bgImage={process.env.REACT_APP_STATIC_URL + 'assets/piano_bg_6.jpg'} strength={200}
         style={{
           backgroundSize: 'cover',
           backgroundPosition: "0% 200%"
         }}>
         <div className="App-header-container">
+
+
           <div className="App-header-top-container">
             {/* <img className="App-header-bg" src="http://localhost:8080/piano_bg_2.jpg" /> */}
             <div className="App-header-top">

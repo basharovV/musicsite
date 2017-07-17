@@ -1,6 +1,5 @@
 :root {
   --home-top-color: #111433;
-
 }
 
 @font-face {
@@ -12,6 +11,27 @@
        url('/fonts/AmaticaSC-Regular.ttf') format('truetype'), /* IE6-IE8 */
 }
 
+@font-face {
+	font-family: 'Computer Modern Typewriter Light';
+	src: url('/fonts/cmunbtl.eot');
+	src: url('/fonts/cmunbtl.eot?#iefix') format('embedded-opentype'),
+		 url('/fonts/cmunbtl.woff') format('woff'),
+		 url('/fonts/cmunbtl.ttf') format('truetype'),
+		 url('/fonts/cmunbtl.svg#cmuntt') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Computer Modern Typewriter Light';
+	src: url('/fonts/cmunbto.eot');
+	src: url('/fonts/cmunbto.eot?#iefix') format('embedded-opentype'),
+		 url('/fonts/cmunbto.woff') format('woff'),
+		 url('/fonts/cmunbto.ttf') format('truetype'),
+		 url('/fonts/cmunbto.svg#cmunbto') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
 body {
   /* light */
   /*background-color: #4b6a00;*/
@@ -24,8 +44,30 @@ a {
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
+  color: #d68b63;
 }
 
+a:visited {
+  color: #b1998c;
+}
+
+a:active {
+  color: #0085ff;
+}
+
+a:hover {
+  color: #0085ff;
+}
+
+p {
+  color: #2f2c2c;
+  font-size: 1.1em;
+}
+
+
+h1 {
+  color: #222121;
+}
 
 h2 {
   /* light */
@@ -34,7 +76,6 @@ h2 {
   /*color: #c7c7c7;*/
   font-size: 2em;
   font-weight: 200;
-
 }
 
 h3 {
@@ -46,7 +87,14 @@ h3 {
   /*color: #c7c7c7;*/
 }
 
-
+img {
+    height: auto;
+    max-width: 100%;
+}
+.App-top-line {
+  height: 3px;
+  background-color: #e42f17;
+}
 .App-separator {
   width:400px;
   margin: auto;
@@ -72,9 +120,8 @@ h3 {
   color: #dbdbdb;
   /*font-family: 'Maven Pro', cursive;*/
   /*font-family: 'Padauk', sans-serif;*/
-  font-family: 'Raleway', sans-serif;
-
-
+  font-family: 'Computer Modern Typewriter Light', sans-serif;
+  /*font-family: 'Rubik', sans-serif;*/
 }
 
 .App-section-active {
@@ -94,12 +141,6 @@ h3 {
   z-index: 1;
   text-align: center;
 
-}
-
-.App-divider {
-  border-color: #67706f;
-  border-bottom: 2px;
-  background-color: #3e3c3b;
 }
 
 .App-header {
@@ -166,7 +207,7 @@ h3 {
   position: relative;
   font-family: 'Amatica SC', cursive;
   font-style: oblique;
-  font-size: 4.5em;
+  font-size: 3.2em;
   color: #8c2b2b;
   z-index: 1;
   line-height: 60px;
@@ -181,13 +222,14 @@ h3 {
   content: " • ";
   color: #147e35;
   text-shadow: none;
+  display: none;
 }
 .App-subtitle {
-  display: inline;
+  display: inline-block;
   position: relative;
   font-family: 'Amatica SC', cursive;
   font-style: oblique;
-  font-size: 4em;
+  font-size: 2.5em;
   color: #949590;
   z-index: 1;
   line-height: 60px;
@@ -306,7 +348,9 @@ h3 {
   /*position: relative;*/
   display: inline-block;
   padding: 5px 8px;
-  border: 1px dashed #82321d;
+  border: 1px solid #82321d;
+  background: linear-gradient(rgba(176, 31, 23, 0.1), rgba(131, 34, 20, 0.1));
+
   border-radius: 5px;
   box-shadow: 0px 0px 15px 5px rgba(106, 17, 52, 0.4), 0px 0px 15px 5px rgba(98, 55, 14, 0.4) inset;
 
@@ -393,14 +437,14 @@ h3 {
   /*display: flex;*/
   text-align: right;
 
-}.App-about-right {
+}
+.App-about-right {
   /*background-color: #d2d2d2;*/
   /*height:500px;*/
   display: inline-block;
-  width: 500px;
+  width: 100%;
   margin: auto;
   vertical-align: top;
-  padding: 1em;
   text-align: left;
 }
 
@@ -461,6 +505,7 @@ h3 {
   display: inline-block;
   padding:0 5px 0 5px;
   border: 1px solid #2f4650;
+  color: #539e88;
   border-radius: 10px;
 }
 
@@ -479,12 +524,15 @@ h3 {
 	/*stroke: #889695;*/
 
 }
+
+
 .App-featured-video {
   display: inline-block;
   border: 1.5px solid #82321d;
+  width: 300px;
 }
+
 .App-featured-info {
-  width: 400px;
   display: inline-block;
   vertical-align: top;
   text-align: left;
@@ -525,6 +573,7 @@ h3 {
 
 .App-track-list {
   list-style: none;
+  padding: 0;
   display: inline-block;
 }
 
@@ -615,22 +664,7 @@ h3 {
   -o-transition: 0.3s;
   display: inline-block;
 }
-/*Desktops*/
-@media only screen and (min-width: 768px) {
 
-   .App-tagline {
-     font-size: 2.5em;
-   }
-
-   .App-about {
-     width: 768px;
-     margin: auto;
-     /*background-color: #d2d2d2;*/
-     /*height:500px;*/
-     /*padding-left: 4em;
-     padding-right: 4em;*/
-   }
-}
 
 .App-trackspage {
   display: inline-block;
@@ -664,4 +698,70 @@ h3 {
 }
 .App-footer li + li::before {
   /*content: ' • ';*/
+}
+
+/*Desktops*/
+@media only screen and (min-width: 768px) {
+  .App-title {
+    display: inline;
+    position: relative;
+    font-family: 'Amatica SC', cursive;
+    font-style: oblique;
+    font-size: 4.5em;
+    color: #8c2b2b;
+    z-index: 1;
+    line-height: 60px;
+    text-shadow: 0 0 20px #8b1010, 0 0 30px #9d5050, 0 0 40px #182981;
+  }
+  .App-title::after {
+    content: " • ";
+    color: #147e35;
+    text-shadow: none;
+  }
+  .App-subtitle {
+    display: inline;
+    position: relative;
+    font-family: 'Amatica SC', cursive;
+    font-style: oblique;
+    font-size: 4em;
+    color: #949590;
+    z-index: 1;
+    line-height: 60px;
+  }
+   .App-tagline {
+     font-size: 2.5em;
+   }
+
+   .App-about {
+     width: 768px;
+     margin: auto;
+     /*background-color: #d2d2d2;*/
+     /*height:500px;*/
+     /*padding-left: 4em;
+     padding-right: 4em;*/
+   }
+   .App-featured-video {
+     display: inline-block;
+     border: 1.5px solid #82321d;
+     width: 100%;
+   }
+   .App-featured-info {
+     width: 400px;
+     display: inline-block;
+     vertical-align: top;
+     text-align: left;
+     padding: 5px;
+     margin-left: 10px;
+   }
+
+   .App-about-right {
+     /*background-color: #d2d2d2;*/
+     /*height:500px;*/
+     display: inline-block;
+     width: 600px;
+     margin: auto;
+     vertical-align: top;
+     padding: 1em;
+     text-align: left;
+   }
 }

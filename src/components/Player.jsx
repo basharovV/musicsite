@@ -145,7 +145,7 @@ export default class Player extends React.Component {
                   </ul>
                 </span>
                 <Truncate className="Player-description"
-                  lines={!expanded && 1}
+                  lines={!expanded && 2}
                   ellipsis={(
                       <span className="Player-description-truncate">... <a href='#' onClick={this.toggleLines.bind(this)}> Show more</a></span>
                   )}

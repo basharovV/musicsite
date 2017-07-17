@@ -25,11 +25,10 @@ export default class Menu extends Component {
     return (
       <div className="App-menu-container">
         <div className="App-menu">
-
           <ul>
             <li>
-              <ScrollLink activeClass="App-section-active" to="about" spy={true} smooth={true} offset={50} duration={500} onSetActive={this.handleSetActive}>
-                <Link to="/#about">about</Link>
+              <ScrollLink activeClass="App-section-active" to="home" spy={true} smooth={true} offset={50} duration={500} onSetActive={this.handleSetActive}>
+                <Link to="/">home</Link>
               </ScrollLink>
             </li>
             <li>
@@ -46,11 +45,9 @@ export default class Menu extends Component {
             </ScrollLink>
             </li>
             <li>
-              <Link className="App-section-active" to="/blog">Blog</Link>
+              <Link className="App-section-active" to="/blog">blog</Link>
             </li>
           </ul>
-          <div className="App-divider"/>
-
           <Route path="/#about" component={About}/>
           <Route path="/#demoreel" component={DemoReel}/>
           <Route path="/#tracks" component={Tracks}/>
