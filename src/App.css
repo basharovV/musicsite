@@ -717,6 +717,7 @@ img {
     content: " • ";
     color: #147e35;
     text-shadow: none;
+    display: inline;
   }
   .App-subtitle {
     display: inline;
