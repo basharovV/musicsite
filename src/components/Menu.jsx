@@ -45,6 +45,9 @@ export default class Menu extends Component {
                 <Link to="/#contact">contact</Link>
             </ScrollLink>
             </li>
+            <li>
+              <Link className="App-section-active" to="/blog">Blog</Link>
+            </li>
           </ul>
           <div className="App-divider"/>
 

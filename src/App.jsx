@@ -5,6 +5,7 @@ import TracksPage  from './components/TracksPage.jsx';
 import ScrollSection from './components/ScrollSection.jsx';
 import Footer from './components/Footer.jsx';
 import Helmet from 'react-helmet'
+import Blog from './components/Blog.jsx';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -40,6 +41,7 @@ class App extends Component {
         <div>
           <Route exact path="/" component={ScrollSection}/>
           <Route path="/tracks" component={TracksPage}/>
+          <Route path="/blog" component={Blog}/>
         </div>
         <Footer/>
       </div>

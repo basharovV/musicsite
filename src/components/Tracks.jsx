@@ -36,15 +36,6 @@ class Tracks extends Component {
     return (
       <div className="App-tracks">
         <ul className="App-track-list">
-
-          {/* <CSSTransitionGroup
-            transitionName="tracks"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={300}> */}
-          <FlipMove duration={500}
-            easing="ease-out"
-            enterAnimation="fade"
-            leaveAnimation="fade" >
           {data.tracks.map(function(track) {
             if (this.state.filterTags.length > 0) {
               for (var tag of filterTags) {
@@ -69,8 +60,6 @@ class Tracks extends Component {
             return null;
             }
           , this)}
-        </FlipMove>
-
         </ul>
         <br/>
 

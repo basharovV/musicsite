@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Tracks from './Tracks.jsx';
-import { TagCloud } from "react-tagcloud";
+import { TagCloud } from 'react-tagcloud';
 import data from '../../tracks.json';
 import update from 'immutability-helper';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup' // ES6
