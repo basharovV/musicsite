@@ -10,8 +10,10 @@ const withTracker = (WrappedComponent) => {
   };
 
   const HOC = (props) => {
-    const page = props.location.pathname;
-    trackPage(page);
+    if (process.env.NODE_ENV === 'production') {
+      const page = props.location.pathname;
+      trackPage(page);
+    }
 
     return (
       <WrappedComponent {...props} />
