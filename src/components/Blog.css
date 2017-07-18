@@ -7,18 +7,26 @@
   display: inline-block;
   border-radius: 10px;
   padding: 10px 20px;
+  max-width: 100%;
+}
+.App-blog-post {
+  width: 100%;
 }
 
 .App-blog-post-title {
-  display: inline-block;
+  display: inline;
   margin: 0;
   float: left;
   font-family: 'Amatica SC', cursive;
-  font-size: 2.5em;
+  font-size: 2.3em;
   /*font-family: 'Cabin Sketch', cursive;*/
   transition: 0.3s;
-
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: left;
+  line-height: 1.2em;
 }
+
 .App-blog-post-title:hover {
   transition: 0.3s;
   color: #2d7aff;
@@ -30,6 +38,7 @@
   margin: 0;
   float: left;
   width: 100%;
+  max-width: 100%;
 }
 
 .App-blog-post-info-container {
@@ -37,6 +46,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
 }
 
 .App-blog-post-author {
@@ -61,11 +71,13 @@
 .App-blog-post-body {
   display: inline-block;
   text-align: left;
+  width: 100%;
 }
 
 .App-blog-post-header {
     display: inline-block;
     width: 100%;
+    max-width: 100%;
 }
 
 .App-divider {
@@ -79,9 +91,56 @@
 @media only screen and (min-width: 768px) {
    .App-blog {
      width: 768px;
-     margin: auto;
-     margin-top: 20px;
-     margin-bottom: 20px;
-     max-width: 768px;
+     max-width: 700px;
    }
+
+   .App-blog-post-title {
+     display: inline;
+     margin: 0;
+     float: left;
+     font-family: 'Amatica SC', cursive;
+     font-size: 2.5em;
+     /*font-family: 'Cabin Sketch', cursive;*/
+     transition: 0.3s;
+   }
+
+   .App-blog-post-title-container {
+     display: inline-block;
+     line-height: normal;
+     margin: 0;
+     float: left;
+     width: 100%;
+     max-width: 100%;
+   }
+
+   .App-blog-post-info-container {
+     float: left;
+     display: inline-flex;
+     justify-content: center;
+     align-items: center;
+     max-width: 100%;
+   }
+
+
+   .App-blog-post-body {
+     display: inline-block;
+     text-align: left;
+     width: 100%;
+   }
+
+   .App-blog-post-header {
+       display: inline-block;
+       width: 100%;
+       max-width: 100%;
+   }
+}
+
+@media only screen and (min-width: 1024px) {
+  .App-blog {
+    width: 768px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 768px;
+  }
 }
