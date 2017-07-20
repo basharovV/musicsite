@@ -44,6 +44,7 @@
     "whatwg-fetch": "2.0.2"
   },
   "dependencies": {
+    "core-js": "^2.4.1",
     "expose-loader": "^0.7.3",
     "file-loader": "^0.10.1",
     "front-matter": "^2.1.2",
