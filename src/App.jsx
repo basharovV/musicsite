@@ -8,6 +8,7 @@ import Helmet from 'react-helmet'
 import Blog from './components/Blog.jsx';
 import { WrappedBlogPost } from './components/BlogPost.jsx';
 import { StickyContainer, Sticky } from 'react-sticky';
+import 'babel-polyfill';
 
 import './App.css';
 import {
