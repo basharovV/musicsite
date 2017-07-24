@@ -70,6 +70,7 @@
     "react-router-hash-link": "^1.0.0",
     "react-scroll": "^1.4.8",
     "react-sticky": "^6.0.1",
+    "react-sticky-el": "^1.0.10",
     "react-stonecutter": "^0.3.4",
     "react-svg": "^2.1.19",
     "react-svg-loader": "^1.1.1",

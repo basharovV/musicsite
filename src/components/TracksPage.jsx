@@ -3,7 +3,8 @@ import Tracks from './Tracks.jsx';
 import { TagCloud } from 'react-tagcloud';
 import data from '../../tracks.json';
 import update from 'immutability-helper';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup' // ES6
+import Helmet from 'react-helmet';
+import { animateScroll } from 'react-scroll';
 
 class TracksPage extends Component {
   constructor(props) {
@@ -22,13 +23,19 @@ class TracksPage extends Component {
     });
   }
 
+  componentDidMount() {
+    animateScroll.scrollToTop({
+      smooth: true
+    });
+  }
+
   tagRenderer = (tag, size, color) => {
     return <span key={tag.value}
       style={
         {
           "color": this.state.tagFilterQuery.includes(tag.value)? '#212121': color,
-          "font-size": size,
-          "vertical-align": 'middle',
+          "fontSize": size,
+          "verticalAlign": 'middle',
           "display": 'inline-block'
         }}
       className={
@@ -92,6 +99,9 @@ class TracksPage extends Component {
 
     return (
       <div className="App-trackspage">
+        <Helmet>
+          <meta name="fragment" content="!"/>
+        </Helmet>
         <h2>Tracks</h2>
         <h3>Choose tracks by tags:</h3>
         <TagCloud className="App-tracks-page-tags" minSize={13}

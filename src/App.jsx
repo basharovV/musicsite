@@ -7,20 +7,13 @@ import Footer from './components/Footer.jsx';
 import Helmet from 'react-helmet'
 import Blog from './components/Blog.jsx';
 import { WrappedBlogPost } from './components/BlogPost.jsx';
-import { StickyContainer, Sticky } from 'react-sticky';
+import Sticky from 'react-sticky-el';
 import 'babel-polyfill';
 
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Route, Switch,  Link, browserHistory
-} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 class App extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return (
       <div className="App">
@@ -39,9 +32,12 @@ class App extends Component {
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
           <meta name="theme-color" content="#ffffff"/>
           <meta name="Description" content="Vyacheslav Basharov is a Russian born composer and producer of soundtracks and music for film, games and advertisements, with a focus on experimental and electronic styles. Currently based in London."/>
+          <meta name="fragment" content="!"/>
         </Helmet>
           <Header/>
-          <Menu/>
+          <Sticky className="App-menu-container" stickyClassName="App-menu-container-sticky">
+            <Menu/>
+          </Sticky>
           {/* <div className="App-separator"/> */}
           <div>
             <Route exact path="/" component={ScrollSection}/>

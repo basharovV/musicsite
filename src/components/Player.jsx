@@ -1,9 +1,7 @@
 import React from 'react';
 import './Player.css';
-import {MdPause, MdPlayArrow} from 'react-icons/lib/md';
 import {FaPlayCircle, FaPauseCircle} from 'react-icons/lib/fa';
 import Wavesurfer from 'react-wavesurfer';
-import { Parallax } from 'react-parallax';
 import Truncate from 'react-truncate';
 
 /*
@@ -54,7 +52,6 @@ export default class Player extends React.Component {
       });
       let minsRemain = timeRemain  % 3600 / 60;
       let secsRemain = timeRemain % 60;
-      console.log("secsremain" + secsRemain);
       let remainText = ('0' + Math.floor(minsRemain)).slice(-2) + ":" + ('0' + Math.floor(secsRemain)).slice(-2);
       return remainText;
   }
@@ -84,7 +81,6 @@ export default class Player extends React.Component {
         timeElapsed: this.getElapsedTimeText(),
         timeRemaining: this.getRemainingTimeText()
       });
-      console.log("Position" + position);
     });
     // console.log("Offset width" + this.timeline.offsetWidth);
     // console.log("Offset left" + this.timeline.offsetLeft);
@@ -115,7 +111,6 @@ export default class Player extends React.Component {
      fillParent: true,
      cursorColor: '#bb4f4f'
    };
-   console.log(this.props.audio);
    let expanded = this.state.expanded;
    let truncated = this.state.truncated;
    let audioPath = this.state.audio;
@@ -126,7 +121,7 @@ export default class Player extends React.Component {
         />
         <div className="Player-top">
           <div className="Player-img-container">
-            <img className="Player-img" src={process.env.REACT_APP_STATIC_URL + this.props.artwork}/>
+            <img alt={this.props.title + " artwork"} className="Player-img" src={process.env.REACT_APP_STATIC_URL + this.props.artwork}/>
           </div>
             <div className="Player-content">
               <div key="info" className="Player-info-show">
@@ -138,9 +133,9 @@ export default class Player extends React.Component {
                     </li>
                     {this.props.tags.map(function(tag) {
                       if (this.props.filterTags.includes(tag)) {
-                        return <li className="Player-tag-filtered">{tag}</li>;
+                        return <li key={tag} className="Player-tag-filtered">{tag}</li>;
                       }
-                      return <li className="Player-tag-default">{tag}</li>;
+                      return <li key={tag} className="Player-tag-default">{tag}</li>;
                     }, this)}
                   </ul>
                 </span>

@@ -53,7 +53,7 @@ class BlogPost extends Component {
             <div className="App-blog-post-title-container">
             <a href={'/blog/'+ this.props.source}><h1 className="App-blog-post-title">{parsedContent.attributes.title}</h1></a></div>
           <div className="App-blog-post-info-container">
-            <div className="App-blog-post-author"><span style={{"font-weight": "normal"}}>by</span> {parsedContent.attributes.author}</div>
+            <div className="App-blog-post-author"><span style={{"fontWeight": "normal"}}>by</span> {parsedContent.attributes.author}</div>
             <div className="App-blog-post-date">{parsedContent.attributes.date}</div>
           </div>
         </div>

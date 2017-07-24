@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
-import ReactPlayer from 'react-player';
-import Menu from './Menu.jsx';
 import SineWaves from 'sine-waves';
-import Script from 'react-load-script';
-import FontAwesome from 'react-fontawesome';
-import Blur from 'react-blur';
 import AppIcon from './Icons.jsx';
-import { Parallax, Background } from 'react-parallax';
-import {FaSoundcloud, FaVimeo, FaGithub, FaInstagram} from 'react-icons/lib/fa';
+import { Parallax } from 'react-parallax';
 import { Link } from 'react-router-dom';
-import { StickyContainer, Sticky } from 'react-sticky';
 
 export default class Header extends Component {
 
@@ -84,8 +77,6 @@ export default class Header extends Component {
       // this.waves[0].strokeStyle = gradientA;
       this.waves[0].strokeStyle = gradientB;
       this.waves[1].strokeStyle = gradientC;
-
-
     }
     });
 

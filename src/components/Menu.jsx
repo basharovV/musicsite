@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import {Link as ScrollLink, Element, Events, animateScroll, scrollSpy} from 'react-scroll';
-import Player from './Player.jsx';
+import {Link as ScrollLink} from 'react-scroll';
 import About from './About.jsx';
 import Tracks from './Tracks.jsx';
 import DemoReel from './DemoReel.jsx';
 import Contact from './Contact.jsx';
-
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { NavBarIcon } from './Icons.jsx';
+import { Route } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 
 export default class Menu extends Component {
@@ -23,16 +22,16 @@ export default class Menu extends Component {
 
   render() {
     return (
-      <div className="App-menu-container">
         <div className="App-menu">
+          <div className="App-navbar-logo"><NavBarIcon/></div>
           <ul>
             <li>
-              <ScrollLink activeClass="App-section-active" to="home" spy={true} smooth={true} offset={50} duration={500} onSetActive={this.handleSetActive}>
+              <ScrollLink to="home" spy={true} smooth={true} offset={50} duration={500} onSetActive={this.handleSetActive}>
                 <Link to="/">home</Link>
               </ScrollLink>
             </li>
             <li>
-              <ScrollLink activeClass="App-section-active" to="demoreel" spy={true} smooth={true} offset={50} duration={500}>
+              <ScrollLink to="demoreel" spy={true} smooth={true} offset={50} duration={500}>
                 <Link to="/#demoreel">demo reel</Link>
             </ScrollLink>
             </li>
@@ -40,21 +39,21 @@ export default class Menu extends Component {
               <Link className="App-section-active" to="/tracks">tracks</Link>
             </li>
             <li>
-              <ScrollLink activeClass="App-section-active" to="contact" spy={true} smooth={true} offset={50} duration={500}>
+              <ScrollLink to="contact" spy={true} smooth={true} offset={50} duration={500}>
                 <Link to="/#contact">contact</Link>
             </ScrollLink>
             </li>
             <li>
-              <Link className="App-section-active" to="/blog">blog</Link>
+              <ScrollLink to="/blog" spy={true} smooth={true} offset={50} duration={500}>
+              <Link to="/blog">blog</Link>
+            </ScrollLink>
             </li>
           </ul>
           <Route path="/#about" component={About}/>
           <Route path="/#demoreel" component={DemoReel}/>
           <Route path="/#tracks" component={Tracks}/>
           <Route path="/#contact" component={Contact}/>
-
         </div>
-      </div>
     )
   }
 }

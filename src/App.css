@@ -3,14 +3,27 @@
 }
 
 @font-face {
-  font-family: 'Amatica SC';
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/AmaticaSC-Regular.ttf'); /* IE9 Compat Modes */
-  src: local('Open Sans'), local('OpenSans'),
-       url('/fonts/AmaticaSC-Regular.ttf') format('truetype'), /* IE6-IE8 */
+    font-family: 'Amatica SC';
+    src: url('/fonts/AmaticaSC-Regular.ttf');
+    src: url('/fonts/AmaticaSC-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/AmaticaSC-Regular-webfont.woff2') format('woff2'),
+         url('/fonts/AmaticaSC-Regular-webfont.woff') format('woff'),
+         url('/fonts/AmaticaSC-Regular.ttf') format('truetype'),
+         url('/fonts/AmaticaSC-Regular-webfont.svg#amatica_scregular') format('svg');
+   font-weight: normal;
+   font-style: normal;
 }
-
+@font-face {
+    font-family: 'Amatica SC';
+    src: url('/fonts/AmaticaSC-Regular.ttf');
+    src: url('/fonts/AmaticaSC-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/AmaticaSC-Regular-webfont.woff2') format('woff2'),
+         url('/fonts/AmaticaSC-Regular-webfont.woff') format('woff'),
+         url('/fonts/AmaticaSC-Regular.ttf') format('truetype'),
+         url('/fonts/AmaticaSC-Regular-webfont.svg#amatica_scregular') format('svg');
+   font-weight: normal;
+   font-style: italic;
+}
 @font-face {
 	font-family: 'Computer Modern Typewriter Light';
 	src: url('/fonts/cmunbtl.eot');
@@ -32,6 +45,7 @@
 	font-weight: normal;
 	font-style: italic;
 }
+
 body {
   /* light */
   /*background-color: #4b6a00;*/
@@ -153,11 +167,13 @@ img {
 }
 
 .App-header-container {
-  background: linear-gradient(rgba(207, 204, 204, 0), var(--home-top-color));
+  background: -webkit-linear-gradient(transparent, var(--home-top-color));
+  background: -o-linear-gradient(transparent, var(--home-top-color));
+  background: -moz-linear-gradient(transparent, var(--home-top-color));
+  background: linear-gradient(transparent, var(--home-top-color));
 }
+
 .App-header-top-container {
-
-
   /*margin-top:4em;*/
   color: white;
   text-align: center;
@@ -205,8 +221,7 @@ img {
 .App-title {
   display: inline;
   position: relative;
-  font-family: 'Amatica SC', cursive;
-  font-style: oblique;
+  font-family: 'Amatica SC';
   font-size: 3.2em;
   color: #8c2b2b;
   z-index: 1;
@@ -227,8 +242,7 @@ img {
 .App-subtitle {
   display: inline-block;
   position: relative;
-  font-family: 'Amatica SC', cursive;
-  font-style: oblique;
+  font-family: 'Amatica SC';
   font-size: 2.5em;
   color: #949590;
   z-index: 1;
@@ -338,6 +352,48 @@ img {
   background-color: var(--home-top-color);
 }
 
+.App-menu-container-sticky {
+  background-color: rgba(241, 239, 246, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transition: 0.5s;
+  box-shadow:0 0 10px #67696c;
+  z-index: 3;
+}
+.App-menu-container-sticky .App-navbar-logo {
+  display: inline-block;
+}
+.App-menu-container-sticky > .App-menu {
+  border: none;
+  background: transparent;
+  margin: 0;
+  border-radius: 0px;
+  box-shadow: none;
+  padding: 0px 8px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+}
+.App-menu-container-sticky > .App-menu li + li::before {
+  content: ' • ';
+  color: #d9ac99;
+}
+
+.App-menu-container-sticky > .App-menu li a {
+  text-align: center;
+  text-decoration: none;
+  /*padding: 0;*/
+  font-size: 20pt;
+  color: #442b2b;
+  display: inline-block;
+}
+.App-menu-container-sticky > .App-menu ul {
+  margin: auto;
+}
 
 .App-menu {
   display: inline-block;
@@ -357,6 +413,11 @@ img {
   /*border-bottom: #3d0b16 solid 2px;*/
 }
 
+.App-navbar-logo {
+  /*position: absolute;*/
+  display: none;
+}
+
 .App-menu ul {
   display: inline-block;
   margin: 0;
@@ -367,7 +428,6 @@ img {
   list-style-type: none;
   display: inline;
   padding: 0;
-  color: #999999;
   text-align: center;
 }
 
@@ -385,7 +445,6 @@ img {
 }
 
 .App-menu li a:hover {
-  text-shadow: 1px 1px 8px #2e2faa;
   text-decoration: line-through;
   color: #cd5757;
 }
@@ -395,12 +454,10 @@ img {
   text-decoration: none;
   /*padding: 0;*/
   font-size: 20pt;
-  color: #f0f0f0;
   display: inline-block;
 }
 
 .App-menu li a>a:hover {
-  text-shadow: 1px 1px 8px #2e2faa;
   text-decoration: line-through;
   color: #cd5757;
 }

@@ -1,20 +1,10 @@
-import Menu from './Menu.jsx';
 import React, { Component } from 'react';
-import {Link as ScrollLink, Element, Events, animateScroll, scrollSpy} from 'react-scroll';
-import Player from './Player.jsx';
+import {Events, animateScroll, scrollSpy} from 'react-scroll';
 import About from './About.jsx';
 import Tracks from './Tracks.jsx';
 import DemoReel from './DemoReel.jsx';
 import Contact from './Contact.jsx';
-
-import { BrowserRouter as Router, Route} from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
-
-const Separator = () => (
-<div className="App-separator">
-  <div className="App-separator-mask"/>
-</div>
-)
 
 export default class ScrollSection extends Component {
 

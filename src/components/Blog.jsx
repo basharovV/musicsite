@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { BlogPost } from './BlogPost.jsx';
 import './Blog.css';
-
+import Helmet from 'react-helmet';
+import { animateScroll } from 'react-scroll';
 export default class Blog extends Component {
   constructor() {
     super();
@@ -10,20 +11,24 @@ export default class Blog extends Component {
     }
   }
 
-    componentWillMount() {
-      let posts = this.requireAll(require.context('../../posts', true, /\.md$/));
-      let postArray = [];
+  componentWillMount() {
+    let posts = this.requireAll(require.context('../../posts', true, /\.md$/));
+    let postArray = [];
 
-      console.log(posts);
-      posts.forEach((file) => {
-        postArray.push({
-          "file": file.slice(0, -3).slice(2)
-        });
+    console.log(posts);
+    posts.forEach((file) => {
+      postArray.push({
+        "file": file.slice(0, -3).slice(2)
       });
-      this.setState({
-          "posts": postArray
-      });
-    }
+    });
+    this.setState({
+        "posts": postArray
+    });
+  }
+  componentDidMount() {
+    animateScroll.scrollToTop({
+      smooth: true});
+  }
 
   requireAll(r) {
     let posts = [];
@@ -37,6 +42,9 @@ export default class Blog extends Component {
     let posts = this.state.posts;
     return (
       <div className="App-blog-container">
+        <Helmet>
+          <meta name="fragment" content="!"/>
+        </Helmet>
         <div className="App-blog">
         {posts.map(function(post) {
           return (
