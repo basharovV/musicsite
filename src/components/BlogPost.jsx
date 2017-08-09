@@ -11,7 +11,7 @@ function LinkRenderer(props) {
   if (props.href.includes('.mp3') || props.href.includes('.wav')) {
     return <SimplePlayer audio={props.href}/>
   }
-  return <a href={props.href}/>
+  return <a href={props.href}>{props.children}</a>
 }
 
 function ImageRenderer(props) {

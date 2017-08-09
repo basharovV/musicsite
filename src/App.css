@@ -1,5 +1,5 @@
 :root {
-  --home-top-color: #111433;
+  --home-top-color: #0f112b;
 }
 
 @font-face {
@@ -58,11 +58,11 @@ a {
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
-  color: #d68b63;
+  color: #0085ff;
 }
 
 a:visited {
-  color: #b1998c;
+  color: #4944bb;
 }
 
 a:active {
