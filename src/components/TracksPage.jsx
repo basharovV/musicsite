@@ -101,6 +101,7 @@ class TracksPage extends Component {
       <div className="App-trackspage">
         <Helmet>
           <meta name="fragment" content="!"/>
+          <title>Tracks | Vyacheslav Basharov - Composer</title>
         </Helmet>
         <h2>Tracks</h2>
         <h3>Choose tracks by tags:</h3>

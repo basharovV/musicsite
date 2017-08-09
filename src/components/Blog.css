@@ -1,3 +1,15 @@
+.Blog-img {
+    height: auto;
+    max-width: 100%;
+}
+
+.App-blog-title {
+  padding: 20px;
+  color: #1a0e0c;
+  font-size: 3em;
+  font-family: 'Cabin Sketch', cursive;
+}
+
 .App-blog-container {
   width: 100%;
   background-color: rgb(235, 219, 190);

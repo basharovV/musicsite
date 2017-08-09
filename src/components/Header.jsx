@@ -86,7 +86,7 @@ export default class Header extends Component {
     return (
       <div className="App-header">
         <div className="App-top-line"/>
-        <Parallax bgImage={process.env.REACT_APP_STATIC_URL + 'assets/piano_bg_6.jpg'} strength={200}
+        <Parallax bgImage={process.env.REACT_APP_STATIC_URL + 'assets/hands-on-keys.jpg'} strength={200}
         style={{
           backgroundSize: 'cover',
           backgroundPosition: "0% 200%"
@@ -97,7 +97,8 @@ export default class Header extends Component {
           <div className="App-header-top-container">
             {/* <img className="App-header-bg" src="http://localhost:8080/piano_bg_2.jpg" /> */}
             <div className="App-header-top">
-              <Link to="/"><AppIcon className="App-logo"/></Link>
+              <Link to="/">
+              <div className="App-logo"><AppIcon/></div></Link>
               <canvas className="App-sine-waves" id="waves" height="150px"/>
 
             </div>

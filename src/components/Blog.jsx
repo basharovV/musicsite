@@ -25,6 +25,7 @@ export default class Blog extends Component {
         "posts": postArray
     });
   }
+
   componentDidMount() {
     animateScroll.scrollToTop({
       smooth: true});
@@ -44,9 +45,11 @@ export default class Blog extends Component {
       <div className="App-blog-container">
         <Helmet>
           <meta name="fragment" content="!"/>
+          <title>Blog | Vyacheslav Basharov - Composer</title>
         </Helmet>
+        <div className="App-blog-title">Blog</div>
         <div className="App-blog">
-        {posts.map(function(post) {
+        {[...posts].reverse().map(function(post) {
           return (
           <BlogPost source={post.file}/>
         )})}

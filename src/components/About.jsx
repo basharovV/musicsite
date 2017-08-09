@@ -16,6 +16,7 @@ const About = () => (
           <li><p>orchestral</p></li>
           <li><p>experimental</p></li>
           <li><p>electronic</p></li>
+          <br/>
           <li><p>jazz</p></li>
           <li><p>ambient</p></li>
         </ul>
@@ -23,9 +24,9 @@ const About = () => (
   </h3>
   <div className="App-header-social-links">
     <ul>
-      <li><a href="https://soundcloud.com/vbash"><FaSoundcloud/></a></li>
-      <li><a href="https://vimeo.com/vbash"><FaVimeo/></a></li>
-      <li><a href="https://instagram.com/slav_basharov/"><FaInstagram/></a></li>
+      <li><a href="https://soundcloud.com/vbash"><FaSoundcloud size={25}/></a></li>
+      <li><a href="https://vimeo.com/vbash"><FaVimeo size={25}/></a></li>
+      <li><a href="https://instagram.com/slav_basharov/"><FaInstagram size={25}/></a></li>
   </ul>
 </div>
 

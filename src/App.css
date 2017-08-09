@@ -101,14 +101,32 @@ h3 {
   /*color: #c7c7c7;*/
 }
 
-img {
-    height: auto;
-    max-width: 100%;
+h5 {
+  color: #4f1e1e;
+  font-size: 1.8em;
+  font-weight: bold;
+  font-family: 'Amatica SC', cursive;
+  margin: 0;
 }
+
+h6 {
+  color: #b04f1f;
+  font-size: 0.8em;
+  font-style: italic;
+  text-align: center;
+  line-height: 0.8em;
+  margin: 0.5em;
+}
+
+li {
+  color: #2f2c2c;
+}
+
 .App-top-line {
   height: 3px;
   background-color: #e42f17;
 }
+
 .App-separator {
   width:400px;
   margin: auto;
@@ -146,19 +164,46 @@ img {
   font-size: large;
 }
 
+@keyframes float {
+	0% {
+    -webkit-filter: drop-shadow( 2px 2px 2px #444242 );
+    filter: drop-shadow( 2px 2px 2px #444242);
+		transform: translatey(0px);
+	}
+	50% {
+    -webkit-filter: drop-shadow( 10px 20px 20px #292828 );
+    filter: drop-shadow( 10px 20px 20px #292828  );
+		transform: translatey(-20px);
+	}
+	100% {
+    -webkit-filter: drop-shadow( 2px 2px 2px #444242);
+    filter: drop-shadow( 2px 2px 2px #444242 );
+		transform: translatey(0px);
+	}
+}
+
 .App-logo {
   height: 50%;
   width: 100%;
-  /*position: absolute;*/
+  position: relative;
   display: inline;
   margin: auto;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+.App-logo svg {
+  -webkit-filter: drop-shadow( 2px 2px 2px #444242 );
+  filter: drop-shadow( 2px 2px 2px #444242);
+  animation: float 6s ease-in-out infinite;
 
 }
 
 .App-header {
 }
+
 
 .App-header-bg  {
   /*background-image: url("http://localhost:8080/piano_bg_3.jpg");*/
@@ -400,17 +445,10 @@ img {
   z-index: 1;
   margin: auto;
   margin-bottom: 10px;
-
-  /*position: relative;*/
   display: inline-block;
   padding: 5px 8px;
-  border: 1px solid #82321d;
   background: linear-gradient(rgba(176, 31, 23, 0.1), rgba(131, 34, 20, 0.1));
-
   border-radius: 5px;
-  box-shadow: 0px 0px 15px 5px rgba(106, 17, 52, 0.4), 0px 0px 15px 5px rgba(98, 55, 14, 0.4) inset;
-
-  /*border-bottom: #3d0b16 solid 2px;*/
 }
 
 .App-navbar-logo {
@@ -509,7 +547,6 @@ img {
   display: inline-block;
   color: #fa6709;
   text-size: 1em;
-  padding: 1em;
   margin: 1em;
   transition: 0.3s;
   border: 1px solid transparent;
@@ -522,6 +559,9 @@ img {
 
 .App-about-sc-button a {
   color: #fa4b00;
+  display: block;
+  height: 100%;
+  padding: 1em;
 }
 
 .App-about-vm-button {
@@ -529,7 +569,6 @@ img {
   display: inline-block;
   color: #098dfa;
   text-size: 1em;
-  padding: 1em;
   transition: 0.3s;
   border: 1px solid transparent;
 
@@ -540,7 +579,11 @@ img {
 
 .App-about-vm-button a {
   color: #0073fa;
+  display: block;
+  height: 100%;
+  padding: 1em;
 }
+
 .App-about-genres {
   /*font-size: 1.2em;*/
   color: #539e88;
@@ -554,20 +597,22 @@ img {
   display: inline;
   padding: 0;
 }
+
 .App-about-genres li {
   display: inline-block;
-  /*border: 1px solid white;*/
+  margin-right: 15px;
 }
+
 .App-about-genres li p {
   display: inline-block;
   padding:0 5px 0 5px;
   border: 1px solid #2f4650;
   color: #539e88;
   border-radius: 10px;
+  margin: 10px 5px 5px 0px;
 }
 
 .App-about-genres li + li::before{
-  content: ', ';
 }
 /*.App-about-genres li + li:last-child::before{
   content: ' and ';
@@ -770,12 +815,14 @@ img {
     line-height: 60px;
     text-shadow: 0 0 20px #8b1010, 0 0 30px #9d5050, 0 0 40px #182981;
   }
+
   .App-title::after {
     content: " • ";
     color: #147e35;
     text-shadow: none;
     display: inline;
   }
+
   .App-subtitle {
     display: inline;
     position: relative;
@@ -788,6 +835,11 @@ img {
   }
    .App-tagline {
      font-size: 2.5em;
+   }
+
+   .App-menu {
+     background: linear-gradient(rgba(176, 31, 23, 0.1), rgba(131, 34, 20, 0.15));
+     border-radius: 5px;
    }
 
    .App-about {

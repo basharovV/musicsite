@@ -1,6 +1,22 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 import frontmatter from 'front-matter';
+import ReactPlayer from 'react-player';
+import Player, { SimplePlayer } from './Player.jsx';
+
+function LinkRenderer(props) {
+  if (props.href.includes('vimeo')) {
+    return <ReactPlayer style={{margin: 'auto'}} width='100%' url={props.href} />
+  }
+  if (props.href.includes('.mp3') || props.href.includes('.wav')) {
+    return <SimplePlayer audio={props.href}/>
+  }
+  return <a href={props.href}/>
+}
+
+function ImageRenderer(props) {
+  return <img className="Blog-img" alt={props.alt} src={props.src}/>
+}
 
 class BlogPost extends Component {
 
@@ -59,7 +75,7 @@ class BlogPost extends Component {
         </div>
           <div className="App-divider"></div>
           <div className="App-blog-post-body">
-            <ReactMarkdown source={parsedContent.body}/>
+            <ReactMarkdown source={parsedContent.body} renderers={{Link: LinkRenderer, Image: ImageRenderer}}/>
           </div>
           <div id="disqus_thread"></div>
 

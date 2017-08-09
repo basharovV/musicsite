@@ -32,7 +32,7 @@ export default class Menu extends Component {
             </li>
             <li>
               <ScrollLink to="demoreel" spy={true} smooth={true} offset={50} duration={500}>
-                <Link to="/#demoreel">demo reel</Link>
+                <Link to="/#demoreel">show reel</Link>
             </ScrollLink>
             </li>
             <li>
