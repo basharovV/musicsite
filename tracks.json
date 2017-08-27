@@ -1,6 +1,15 @@
 {
   "tracks": [
     {
+      "audio": "tracks/A%20Dirty%20Job/A%20Dirty%20Job.mp3",
+      "artwork": "tracks/A%20Dirty%20Job/artwork.jpg",
+      "title": "A Dirty Job",
+      "description": "A lo-fi, mellow, dark piano track that would suit a silent film.",
+      "genre": "Piano",
+      "tags": ["lo-fi", "piano", "strings", "synth"],
+      "featured": "true"
+    },
+    {
       "audio": "tracks/The%20Nightmare%20Revelation/The%20Nightmare%20Revelation.mp3",
       "artwork": "tracks/The%20Nightmare%20Revelation/artwork.jpg",
       "title": "The Nightmare Revelation",
@@ -25,7 +34,7 @@
       "description": "This track has an interesting rhythm and jazzy breaks in between. Although some samples and synths are used, the track maintains it's acoustic feel. The ending is a improvisational take on the Harry Potter theme",
       "genre": "Jazz fusion",
       "tags": ["jazz", "piano", "synth"],
-      "featured": "true"
+      "featured": "false"
     },
     {
       "audio": "tracks/Memento%20Mori/Memento%20Mori.mp3",
@@ -40,7 +49,7 @@
       "audio": "tracks/Echoes%20Of%20A%20Lost%20City/Echoes%20Of%20A%20Lost%20City.mp3",
       "artwork": "tracks/Echoes%20Of%20A%20Lost%20City/artwork.jpg",
       "title": "Echoes Of A Lost City",
-      "description": "",
+      "description": "A blend of piano, orchestral and electronic ambience. The repeating sequence builds up slowly to the final moment",
       "genre": "Ambient",
       "tags": ["electronic", "piano", "strings"],
       "featured": "false"
@@ -49,7 +58,7 @@
       "audio": "tracks/Analog%20Cityman/Analog%20Cityman.mp3",
       "artwork": "tracks/Analog%20Cityman/artwork.jpg",
       "title": "Analog Cityman",
-      "description": "",
+      "description": "An improv session with multiple analogue-like synths. This was all recorded in one take. ",
       "genre": "Experimental",
       "tags": ["electronic", "piano", "minimalism"],
       "featured": "false"
