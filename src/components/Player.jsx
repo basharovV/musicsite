@@ -109,6 +109,7 @@ export default class Player extends React.Component {
             <div className="Player-content">
               <div key="info" className="Player-info-show">
                 <span className="Player-title">{this.state.title}</span>
+              <br/>
                 <span className="Player-tags">
                   <ul>
                     <li className="Player-tag-genre">
@@ -122,6 +123,7 @@ export default class Player extends React.Component {
                     }, this)}
                   </ul>
                 </span>
+                <br/>
                 <Truncate className="Player-description"
                   lines={!expanded && 2}
                   ellipsis={(

@@ -1,6 +1,24 @@
 {
   "tracks": [
     {
+      "audio": "tracks/Hated%20in%20the%20Nation/Hated%20in%20the%20Nation.mp3",
+      "artwork": "tracks/Hated%20in%20the%20Nation/artwork.jpg",
+      "title": "Hated in the Nation",
+      "description": "Dark ambient piano track, with a revolving mysterious futuristic synths and bright piano. Titled after the fantastic Black Mirror episode.",
+      "genre": "Electronic",
+      "tags": ["synth", "piano", "pads", "ambient"],
+      "featured": "true"
+    },
+    {
+      "audio": "tracks/NEONDRIVE/NEONDRIVE.mp3",
+      "artwork": "tracks/NEONDRIVE/artwork.jpg",
+      "title": "N E O N D R I V E",
+      "description": "A lo-fi, mellow, dark piano track that would suit a silent film.",
+      "genre": "Piano",
+      "tags": ["lo-fi", "piano", "strings", "synth"],
+      "featured": "true"
+    },
+    {
       "audio": "tracks/A%20Dirty%20Job/A%20Dirty%20Job.mp3",
       "artwork": "tracks/A%20Dirty%20Job/artwork.jpg",
       "title": "A Dirty Job",

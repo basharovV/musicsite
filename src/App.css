@@ -794,6 +794,7 @@ li {
   flex: auto;
   display: inline-block;
   padding: 10px 10px;
+  color: #8c7272;
 }
 .App-footer li + li{
   border-left: 1px solid #322f46;
