@@ -13,9 +13,18 @@
       "audio": "tracks/NEONDRIVE/NEONDRIVE.mp3",
       "artwork": "tracks/NEONDRIVE/artwork.jpg",
       "title": "N E O N D R I V E",
-      "description": "A lo-fi, mellow, dark piano track that would suit a silent film.",
-      "genre": "Piano",
-      "tags": ["lo-fi", "piano", "strings", "synth"],
+      "description": "A lo-fi synthwave track with a long build-up, catch melody and rhythm. There is also a guitar break in the middle which changes the tone of the track from a dance-able tune to a darker soundtrack.",
+      "genre": "Synthwave",
+      "tags": ["lo-fi", "synth", "retro", "dark", "beat"],
+      "featured": "true"
+    },
+    {
+      "audio": "tracks/Shinjuku%202084/Shinjuku%202084.mp3",
+      "artwork": "tracks/Shinjuku%202084/artwork.jpg",
+      "title": "Shinjuku 2084",
+      "description": "An echo of fast plucky synths, arpeggios and rhythmic ambience. The progression and tone of the track would suit an anime, hance the the title named after the Tokyo district.",
+      "genre": "Electronic",
+      "tags": ["lo-fi", "fast", "rhythm", "analog", "beat"],
       "featured": "true"
     },
     {
