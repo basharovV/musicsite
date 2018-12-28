@@ -627,10 +627,9 @@ li {
 
 }
 
-
 .App-featured-video {
   display: inline-block;
-  border: 1.5px solid #82321d;
+  border: none;
   width: 300px;
 }
 
