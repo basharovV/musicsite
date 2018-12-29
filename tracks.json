@@ -1,13 +1,31 @@
 {
   "tracks": [
     {
+      "audio": "tracks/Monologue%20Ballad/Monologue%20Ballad.mp3",
+      "artwork": "tracks/Monologue%20Ballad/artwork.jpg",
+      "title": "Monologue Ballad",
+      "description": "An emotional synth melody, full of character and softness. The melody is catchy and is followed by a progression inspired by Russian motives.",
+      "genre": "Electronic",
+      "tags": ["synth", "soft", "electronic", "ambient", "retro"],
+      "featured": "true"
+    },
+    {
+      "audio": "tracks/Phobia/Phobia.mp3",
+      "artwork": "tracks/Phobia/artwork.jpg",
+      "title": "Phobia",
+      "description": "Experimental dark electronic track with heavy hiss and energy, ending in a climactic buildup.",
+      "genre": "Electronic",
+      "tags": ["synth", "dark", "electronic", "experimental"],
+      "featured": "true"
+    },
+    {
       "audio": "tracks/Hated%20in%20the%20Nation/Hated%20in%20the%20Nation.mp3",
       "artwork": "tracks/Hated%20in%20the%20Nation/artwork.jpg",
       "title": "Hated in the Nation",
       "description": "Dark ambient piano track, with a revolving mysterious futuristic synths and bright piano. Titled after the fantastic Black Mirror episode.",
       "genre": "Electronic",
       "tags": ["synth", "piano", "pads", "ambient"],
-      "featured": "true"
+      "featured": "false"
     },
     {
       "audio": "tracks/NEONDRIVE/NEONDRIVE.mp3",
@@ -34,7 +52,7 @@
       "description": "A lo-fi, mellow, dark piano track that would suit a silent film.",
       "genre": "Piano",
       "tags": ["lo-fi", "piano", "strings", "synth"],
-      "featured": "true"
+      "featured": "false"
     },
     {
       "audio": "tracks/The%20Nightmare%20Revelation/The%20Nightmare%20Revelation.mp3",
@@ -70,7 +88,7 @@
       "description": "Heavily sample based, this track blends raw orchestral instruments with synth samples. Flutes, clarinets, double bass, violins, and cello make short but meaningful appearances in this track. The percussion plays with irregularity, while the melodies are more rhythmic",
       "genre": "Electronic",
       "tags": ["electronic", "rhythm", "mysterious"],
-      "featured": "true"
+      "featured": "false"
     },
     {
       "audio": "tracks/Echoes%20Of%20A%20Lost%20City/Echoes%20Of%20A%20Lost%20City.mp3",
